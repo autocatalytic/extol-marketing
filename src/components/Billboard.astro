@@ -1,0 +1,56 @@
+---
+interface Props {
+  variant?: 'split' | 'budget'
+}
+
+const { variant = 'split' } = Astro.props
+
+const splitMembers = [
+  { name: 'Maya Chen', role: 'Vocals / Keys', pct: 30, color: 'bg-terracotta-500' },
+  { name: 'Jordan Ellis', role: 'Guitar', pct: 30, color: 'bg-amber-500' },
+  { name: 'Sam Okafor', role: 'Bass', pct: 20, color: 'bg-bark-700' },
+  { name: 'Rina Torres', role: 'Drums', pct: 20, color: 'bg-terracotta-400' },
+]
+
+const budgetCategories = [
+  { name: 'Travel League', pct: 40, color: 'bg-terracotta-500' },
+  { name: 'Equipment', pct: 25, color: 'bg-amber-500' },
+  { name: 'Coaching', pct: 20, color: 'bg-bark-700' },
+  { name: 'Admin', pct: 15, color: 'bg-terracotta-400' },
+]
+
+const items = variant === 'split' ? splitMembers : budgetCategories
+const title = variant === 'split' ? 'The Architects' : 'Riverside Youth Soccer'
+const subtitle = variant === 'split' ? 'Community Agreement' : 'Budget Allocation'
+---
+
+<div class="rounded-xl border border-warm-gray-200 bg-white shadow-sm overflow-hidden">
+  <div class="px-5 py-4 border-b border-warm-gray-200">
+    <p class="font-semibold text-bark-900 text-sm">{title}</p>
+    <p class="text-xs text-warm-gray-500 mt-0.5">{subtitle}</p>
+  </div>
+  <div class="p-5">
+    <div class="flex gap-1.5 h-16 rounded-lg overflow-hidden">
+      {items.map((item) => (
+        <div
+          class={`${item.color} flex items-end justify-center pb-2 transition-all`}
+          style={`width: ${item.pct}%`}
+        >
+          <span class="text-cream text-xs font-medium">{item.pct}%</span>
+        </div>
+      ))}
+    </div>
+    <div class="mt-4 space-y-2">
+      {items.map((item) => (
+        <div class="flex items-center justify-between text-sm">
+          <div class="flex items-center gap-2">
+            <div class={`w-2.5 h-2.5 rounded-full ${item.color}`} />
+            <span class="text-bark-900 font-medium">{item.name}</span>
+            {'role' in item && <span class="text-warm-gray-500 text-xs">{item.role}</span>}
+          </div>
+          <span class="text-warm-gray-500 font-medium">{item.pct}%</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

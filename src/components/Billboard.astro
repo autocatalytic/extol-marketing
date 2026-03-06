@@ -21,12 +21,16 @@ const budgetCategories = [
 
 const items = variant === 'split' ? splitMembers : budgetCategories
 const title = variant === 'split' ? 'The Architects' : 'Riverside Youth Soccer'
+const type = variant === 'split' ? 'Band' : 'Sports Club'
 const subtitle = variant === 'split' ? 'Community Agreement' : 'Budget Allocation'
 ---
 
 <div class="rounded-xl border border-warm-gray-200 bg-white shadow-sm overflow-hidden">
   <div class="px-5 py-4 border-b border-warm-gray-200">
-    <p class="font-semibold text-bark-900 text-sm">{title}</p>
+    <div class="flex items-center justify-between">
+      <p class="font-semibold text-bark-900 text-sm">{title}</p>
+      <span class="text-xs px-2 py-0.5 rounded-full bg-warm-gray-100 text-warm-gray-500 font-medium">{type}</span>
+    </div>
     <p class="text-xs text-warm-gray-500 mt-0.5">{subtitle}</p>
   </div>
   <div class="p-5">

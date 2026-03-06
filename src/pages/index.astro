@@ -1,0 +1,221 @@
+---
+import Base from '../layouts/Base.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+---
+
+<Base>
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="max-w-5xl mx-auto px-6 pt-24 pb-20">
+      <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-600 leading-tight text-bark-900 max-w-3xl">
+        The capital was always there. <br />
+        <span class="text-terracotta-500">Now you can see it.</span>
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-warm-gray-500 max-w-2xl leading-relaxed">
+        Every community already governs itself. The agreements exist, the contributions are real, the economics are felt. They're just invisible. Extol turns on the lights.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a
+          href="#waitlist"
+          class="inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-600 transition-colors"
+        >
+          Join the waitlist
+        </a>
+        <a
+          href="#how-it-works"
+          class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-bark-800 border border-warm-gray-200 rounded-lg hover:bg-warm-gray-100 transition-colors"
+        >
+          How it works
+        </a>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="bg-warm-gray-100 py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
+          Governance exists everywhere — it's just invisible
+        </h2>
+        <div class="mt-10 grid sm:grid-cols-3 gap-8">
+          <div>
+            <p class="text-sm font-semibold text-terracotta-500 uppercase tracking-wide">Opaque agreements</p>
+            <p class="mt-3 text-warm-gray-500 leading-relaxed">
+              The split sheet lives in a lawyer's filing cabinet. The operating agreement is a PDF nobody reads. One person controls the spreadsheet.
+            </p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-terracotta-500 uppercase tracking-wide">Hidden economics</p>
+            <p class="mt-3 text-warm-gray-500 leading-relaxed">
+              Revenue reported on trust — or not at all. Contributions felt but never documented. Value created daily, invisible to the people creating it.
+            </p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-terracotta-500 uppercase tracking-wide">Quiet breakdowns</p>
+            <p class="mt-3 text-warm-gray-500 leading-relaxed">
+              Bands break up over money nobody tracked. Maintainers burn out with nothing to show. Civic orgs lose trust because nobody knows where the funds went.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
+          Five things Extol shares
+        </h2>
+        <p class="mt-4 text-warm-gray-500 max-w-2xl leading-relaxed">
+          Your communities already have these. Extol makes them legible, so everyone can participate.
+        </p>
+        <div class="mt-12 space-y-10">
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center">
+              <span class="text-amber-500 font-semibold text-sm">1</span>
+            </div>
+            <div>
+              <h3 class="font-semibold text-bark-900">Share the org</h3>
+              <p class="mt-1 text-warm-gray-500">The structure, roles, and authority that already exist — made visible to everyone.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center">
+              <span class="text-amber-500 font-semibold text-sm">2</span>
+            </div>
+            <div>
+              <h3 class="font-semibold text-bark-900">Share the management</h3>
+              <p class="mt-1 text-warm-gray-500">The decisions already being made — opened up so everyone can participate.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center">
+              <span class="text-amber-500 font-semibold text-sm">3</span>
+            </div>
+            <div>
+              <h3 class="font-semibold text-bark-900">Share the splits</h3>
+              <p class="mt-1 text-warm-gray-500">The economics governed by some agreement — made transparent so everyone trusts the numbers.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center">
+              <span class="text-amber-500 font-semibold text-sm">4</span>
+            </div>
+            <div>
+              <h3 class="font-semibold text-bark-900">Share the ownership</h3>
+              <p class="mt-1 text-warm-gray-500">Participation becomes a stake in what you helped build — not a line on someone else's ledger.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center">
+              <span class="text-amber-500 font-semibold text-sm">5</span>
+            </div>
+            <div>
+              <h3 class="font-semibold text-bark-900">Share the record</h3>
+              <p class="mt-1 text-warm-gray-500">A portable, verifiable attestation of what you contributed — controlled by you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roots & Fruits -->
+    <section class="bg-warm-gray-100 py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="max-w-3xl">
+          <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
+            Roots &amp; Fruits
+          </h2>
+          <p class="mt-6 text-warm-gray-500 leading-relaxed">
+            Every community member makes a choice: how much of your attention do you commit?
+          </p>
+          <div class="mt-8 grid sm:grid-cols-2 gap-8">
+            <div class="bg-cream rounded-xl p-6">
+              <p class="text-sm font-semibold text-amber-500 uppercase tracking-wide">Fruits — Attention</p>
+              <p class="mt-3 text-warm-gray-500 leading-relaxed">
+                The harvest. Liquid, spendable, portable. The ability to take what you've earned and use it elsewhere. Currency you can move.
+              </p>
+            </div>
+            <div class="bg-cream rounded-xl p-6">
+              <p class="text-sm font-semibold text-terracotta-500 uppercase tracking-wide">Roots — Influence</p>
+              <p class="mt-3 text-warm-gray-500 leading-relaxed">
+                Commitment. Stake. Contribution that stays in the ground and makes everything above it grow. The deeper the roots, the stronger the voice.
+              </p>
+            </div>
+          </div>
+          <p class="mt-6 text-warm-gray-500 leading-relaxed">
+            There's no right answer — just a real trade-off, made visible. That's what makes governance honest.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who it's for -->
+    <section id="for-whom" class="py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
+          Who it's for
+        </h2>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="border border-warm-gray-200 rounded-xl p-6">
+            <p class="font-semibold text-bark-900">Bands &amp; music collectives</p>
+            <p class="mt-2 text-sm text-warm-gray-500">Split sheets that everyone can see and collectively modify.</p>
+          </div>
+          <div class="border border-warm-gray-200 rounded-xl p-6">
+            <p class="font-semibold text-bark-900">Podcasts &amp; creative teams</p>
+            <p class="mt-2 text-sm text-warm-gray-500">Operating agreements that live and breathe, not gather dust.</p>
+          </div>
+          <div class="border border-warm-gray-200 rounded-xl p-6">
+            <p class="font-semibold text-bark-900">Open source projects</p>
+            <p class="mt-2 text-sm text-warm-gray-500">Maintainer contributions documented, recognized, rewarded.</p>
+          </div>
+          <div class="border border-warm-gray-200 rounded-xl p-6">
+            <p class="font-semibold text-bark-900">Youth leagues &amp; civic orgs</p>
+            <p class="mt-2 text-sm text-warm-gray-500">Transparent treasuries and decisions everyone can trust.</p>
+          </div>
+          <div class="border border-warm-gray-200 rounded-xl p-6">
+            <p class="font-semibold text-bark-900">DAOs &amp; cooperatives</p>
+            <p class="mt-2 text-sm text-warm-gray-500">On-chain governance with real accountability, not just token votes.</p>
+          </div>
+          <div class="border border-warm-gray-200 rounded-xl p-6">
+            <p class="font-semibold text-bark-900">Any community with shared economics</p>
+            <p class="mt-2 text-sm text-warm-gray-500">If you split revenue, manage a treasury, or track contributions — you need this.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waitlist -->
+    <section id="waitlist" class="bg-bark-900 py-20">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="font-serif text-3xl sm:text-4xl font-500 text-cream">
+          Your community already governs itself. <br />
+          Let everyone see how.
+        </h2>
+        <p class="mt-4 text-amber-200 max-w-xl mx-auto">
+          We're building Extol for communities that are ready to make their governance visible. Join the waitlist to be first in.
+        </p>
+        <div class="mt-8 flex justify-center">
+          <form class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+            <input
+              type="email"
+              placeholder="you@community.org"
+              required
+              class="flex-1 px-4 py-3 rounded-lg bg-bark-800 text-cream placeholder-warm-gray-500 border border-bark-700 focus:outline-none focus:border-terracotta-400"
+            />
+            <button
+              type="submit"
+              class="px-6 py-3 font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-400 transition-colors"
+            >
+              Join waitlist
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Base>

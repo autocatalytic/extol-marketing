@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warm palette pulled from Roots & Fruits graphic */
+  --color-amber-50: #fdf8f0;
+  --color-amber-100: #f9edd8;
+  --color-amber-200: #f0d5a8;
+  --color-amber-400: #d4943a;
+  --color-amber-500: #c07a2a;
+  --color-terracotta-400: #c4694a;
+  --color-terracotta-500: #a8533a;
+  --color-terracotta-600: #8b3f2e;
+  --color-bark-700: #5c3d2e;
+  --color-bark-800: #3d2820;
+  --color-bark-900: #2a1a14;
+  --color-cream: #faf7f2;
+  --color-warm-gray-100: #f0ebe4;
+  --color-warm-gray-200: #ddd5ca;
+  --color-warm-gray-500: #8a7e72;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+}

@@ -198,8 +198,9 @@ import Footer from '../components/Footer.astro'
           We're building Extol for communities that are ready to make their governance visible. Join the waitlist to be first in.
         </p>
         <div class="mt-8 flex justify-center">
-          <form class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+          <form id="waitlist-form" class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
             <input
+              id="waitlist-email"
               type="email"
               placeholder="you@community.org"
               required
@@ -207,14 +208,53 @@ import Footer from '../components/Footer.astro'
             />
             <button
               type="submit"
+              id="waitlist-btn"
               class="px-6 py-3 font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-400 transition-colors"
             >
               Join waitlist
             </button>
           </form>
+          <p id="waitlist-success" class="hidden mt-4 text-amber-200">
+            You're on the list. We'll be in touch.
+          </p>
+          <p id="waitlist-error" class="hidden mt-4 text-terracotta-400">
+            Something went wrong. Please try again.
+          </p>
         </div>
       </div>
     </section>
+
+    <script>
+      const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2zk02ctXcnHm0C35ZnNoi0YJFhmVUqlgH7hbn44JHbXFY6iJwHwMsqKsw34E4VWXH/exec';
+
+      document.getElementById('waitlist-form')?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = (document.getElementById('waitlist-email') as HTMLInputElement).value;
+        const btn = document.getElementById('waitlist-btn') as HTMLButtonElement;
+        const form = document.getElementById('waitlist-form') as HTMLFormElement;
+        const success = document.getElementById('waitlist-success')!;
+        const error = document.getElementById('waitlist-error')!;
+
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        error.classList.add('hidden');
+
+        try {
+          await fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email }),
+          });
+          form.classList.add('hidden');
+          success.classList.remove('hidden');
+        } catch {
+          error.classList.remove('hidden');
+          btn.textContent = 'Join waitlist';
+          btn.disabled = false;
+        }
+      });
+    </script>
   </main>
 
   <Footer />

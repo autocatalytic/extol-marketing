@@ -1,0 +1,116 @@
+---
+import Base from '../layouts/Base.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+
+interface Bullet {
+  title: string
+  text: string
+}
+
+interface Props {
+  vertical: string
+  headline: string
+  subheadline: string
+  bullets: Bullet[]
+  cta: string
+  seoTitle: string
+}
+
+const { vertical, headline, subheadline, bullets, cta, seoTitle } = Astro.props
+---
+
+<Base title={seoTitle}>
+  <Header />
+
+  <main>
+    <section class="max-w-3xl mx-auto px-6 pt-24 pb-16">
+      <h1 class="font-serif text-4xl sm:text-5xl font-600 leading-tight text-bark-900">
+        {headline}
+      </h1>
+      <p class="mt-6 text-lg text-warm-gray-500 leading-relaxed">
+        {subheadline}
+      </p>
+    </section>
+
+    <section class="max-w-3xl mx-auto px-6 pb-20">
+      <div class="space-y-8">
+        {bullets.map((bullet) => (
+          <div>
+            <p class="font-semibold text-bark-900">{bullet.title}</p>
+            <p class="mt-2 text-warm-gray-500 leading-relaxed">{bullet.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="bg-bark-900 py-20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="font-serif text-3xl sm:text-4xl font-500 text-cream">
+          {cta}
+        </h2>
+        <div class="mt-8 flex justify-center">
+          <form id="waitlist-form" class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+            <input
+              id="waitlist-email"
+              type="email"
+              placeholder="you@community.org"
+              required
+              class="flex-1 px-4 py-3 rounded-lg bg-bark-800 text-cream placeholder-warm-gray-500 border border-bark-700 focus:outline-none focus:border-terracotta-400"
+            />
+            <button
+              type="submit"
+              id="waitlist-btn"
+              class="px-6 py-3 font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-400 transition-colors"
+            >
+              Join waitlist
+            </button>
+          </form>
+          <p id="waitlist-success" class="hidden mt-4 text-amber-200">
+            You're on the list. We'll be in touch.
+          </p>
+          <p id="waitlist-error" class="hidden mt-4 text-terracotta-400">
+            Something went wrong. Please try again.
+          </p>
+        </div>
+        <p class="mt-8 text-sm text-warm-gray-500">
+          Extol is in development. Join the waitlist to be first in.
+        </p>
+      </div>
+    </section>
+
+    <script define:vars={{ vertical }}>
+      const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2zk02ctXcnHm0C35ZnNoi0YJFhmVUqlgH7hbn44JHbXFY6iJwHwMsqKsw34E4VWXH/exec';
+
+      document.getElementById('waitlist-form')?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('waitlist-email').value;
+        const btn = document.getElementById('waitlist-btn');
+        const form = document.getElementById('waitlist-form');
+        const success = document.getElementById('waitlist-success');
+        const error = document.getElementById('waitlist-error');
+
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        error.classList.add('hidden');
+
+        try {
+          await fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, source: vertical }),
+          });
+          form.classList.add('hidden');
+          success.classList.remove('hidden');
+        } catch {
+          error.classList.remove('hidden');
+          btn.textContent = 'Join waitlist';
+          btn.disabled = false;
+        }
+      });
+    </script>
+  </main>
+
+  <Footer />
+</Base>

@@ -7,98 +7,96 @@ import Ledger from '../components/Ledger.astro'
 import ProposalBanner from '../components/ProposalBanner.astro'
 ---
 
-<Base title="Extol — Transparent agreements for bands, nonprofits, and open source projects">
+<Base title="Extol — The ledger for everything people build together">
   <Header />
 
   <main>
     <!-- Hero -->
     <section class="max-w-5xl mx-auto px-6 pt-24 pb-20">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-600 leading-tight text-bark-900 max-w-3xl">
-            Your community already works. <br />
-            <span class="text-terracotta-500">Now everyone can see how.</span>
-          </h1>
-          <p class="mt-6 text-lg sm:text-xl text-warm-gray-500 max-w-2xl leading-relaxed">
-            The agreements exist, the contributions are real, the economics are felt — they're just trapped in spreadsheets, group chats, and someone's head. Extol makes them visible to everyone.
-          </p>
-          <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <a
-              href="#waitlist"
-              class="inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-600 transition-colors"
-            >
-              Join the waitlist
-            </a>
-            <a
-              href="#how-it-works"
-              class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-bark-800 border border-warm-gray-200 rounded-lg hover:bg-warm-gray-100 transition-colors"
-            >
-              How it works
-            </a>
-          </div>
-        </div>
-        <div class="hidden lg:block">
-          <Billboard variant="split" />
-        </div>
+      <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-600 leading-tight text-bark-900 max-w-4xl">
+        The most valuable work happens together. <br />
+        <span class="text-terracotta-500">The economy just hasn't caught up.</span>
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-warm-gray-500 max-w-2xl leading-relaxed">
+        People create enormous value together — splitting revenue, running budgets, showing up week after week. But the tools that track value were built for companies, not communities. Extol is the ledger for everything people build together.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a
+          href="#waitlist"
+          class="inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-600 transition-colors"
+        >
+          Join the waitlist
+        </a>
+        <a
+          href="#how-it-works"
+          class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-bark-800 border border-warm-gray-200 rounded-lg hover:bg-warm-gray-100 transition-colors"
+        >
+          How it works
+        </a>
       </div>
     </section>
 
-    <!-- The Problem -->
-    <section class="bg-warm-gray-100 py-20">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900 max-w-2xl">
-          You're already doing the hard part. The tool should be the easy part.
-        </h2>
-        <p class="mt-6 text-warm-gray-500 max-w-2xl leading-relaxed">
-          Your band has a split. Your nonprofit has a budget. Your open source project has contributors who've never been compensated. The agreements exist — they're just invisible, ungoverned, and one awkward conversation away from falling apart.
-        </p>
-        <div class="mt-10">
-          <p class="text-sm font-semibold text-terracotta-500 uppercase tracking-wide">The status quo</p>
-          <ul class="mt-4 space-y-3 text-warm-gray-500">
-            <li class="flex items-start gap-3">
-              <span class="text-warm-gray-200 mt-0.5">&bull;</span>
-              Enter revenue in a spreadsheet
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-warm-gray-200 mt-0.5">&bull;</span>
-              Calculate each person's share
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-warm-gray-200 mt-0.5">&bull;</span>
-              Email or text everyone the numbers
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-warm-gray-200 mt-0.5">&bull;</span>
-              Wait for replies (or don't get them)
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-warm-gray-200 mt-0.5">&bull;</span>
-              Mark as paid and hope nobody disputes the math
-            </li>
-          </ul>
-          <p class="mt-8 text-lg font-medium text-bark-900">
-            Extol: enter one number. Everyone sees their share.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- How it works -->
-    <section id="how-it-works" class="py-20">
+    <!-- Section 1: Every contribution deserves to be remembered -->
+    <section id="for-whom" class="py-16">
       <div class="max-w-5xl mx-auto px-6">
         <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
-          One screen. The whole story.
+          Every contribution deserves to be remembered.
         </h2>
-        <p class="mt-4 text-warm-gray-500 max-w-2xl leading-relaxed">
-          Every member sees the same truth. No second ledger. No extra work to be transparent.
-        </p>
+      </div>
+      <div class="mt-10 max-w-5xl mx-auto px-6">
+        <div class="flex gap-4 overflow-x-auto scroll-snap-x-mandatory pb-4 -mx-6 px-6" style="-webkit-overflow-scrolling: touch; scrollbar-width: none;">
+          <!-- Doing things together — invitation card -->
+          <div class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-violet-50 border-l-4 border-violet-400 scroll-snap-start">
+            <p class="font-semibold text-violet-500">Doing things together</p>
+            <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
+              Cleanups, practices, jam sessions, Saturday hikes. It all counts.
+            </p>
+          </div>
+          <!-- Bands -->
+          <a href="/bands" class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start hover:border-terracotta-400 transition-colors">
+            <p class="font-semibold text-bark-900">Bands &amp; Creatives</p>
+            <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
+              Four people created something valuable. Extol makes sure all four are accounted for.
+            </p>
+          </a>
+          <!-- Open Source -->
+          <a href="/oss" class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start hover:border-terracotta-400 transition-colors">
+            <p class="font-semibold text-bark-900">Open Source</p>
+            <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
+              Thousands of people built something valuable. Extol tracks what a commit log can't.
+            </p>
+          </a>
+          <!-- Sports Clubs -->
+          <a href="/clubs" class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start hover:border-terracotta-400 transition-colors">
+            <p class="font-semibold text-bark-900">Sports Clubs</p>
+            <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
+              Parents and coaches create enormous community value. Extol shows where it goes.
+            </p>
+          </a>
+          <!-- Nonprofits -->
+          <a href="/nonprofits" class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start hover:border-terracotta-400 transition-colors">
+            <p class="font-semibold text-bark-900">Nonprofits</p>
+            <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
+              Volunteers, donors, board members — all creating value for their communities. Extol gives them a shared record.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Here's what it looks like -->
+    <section id="how-it-works" class="bg-warm-gray-100 py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
+          Here's what it looks like.
+        </h2>
 
         <!-- The Agreement -->
-        <div class="mt-16 grid lg:grid-cols-2 gap-12 items-start">
+        <div class="mt-12 grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <h3 class="text-xl font-semibold text-bark-900">The Agreement</h3>
             <p class="mt-3 text-warm-gray-500 leading-relaxed">
-              The split is the product. Proportional blocks show who gets what — visible to every member, decided together. Set it up once, change it only when the group decides to.
+              Proportional blocks show who gets what — visible to every member, decided together.
             </p>
           </div>
           <div>
@@ -111,7 +109,7 @@ import ProposalBanner from '../components/ProposalBanner.astro'
           <div class="lg:order-2">
             <h3 class="text-xl font-semibold text-bark-900">The Ledger</h3>
             <p class="mt-3 text-warm-gray-500 leading-relaxed">
-              Enter a revenue amount. Extol calculates what everyone is owed. Three fields, one tap — less work than texting your group chat.
+              Enter one number. Everyone sees their share.
             </p>
           </div>
           <div class="lg:order-1">
@@ -124,7 +122,7 @@ import ProposalBanner from '../components/ProposalBanner.astro'
           <div>
             <h3 class="text-xl font-semibold text-bark-900">Decisions Without Meetings</h3>
             <p class="mt-3 text-warm-gray-500 leading-relaxed">
-              Proposals pass automatically unless someone raises a concern. No voting, no quorum, no scheduling a call. The default is forward motion — the only actions are "raise a concern" or "formally dissent."
+              Proposals pass automatically unless someone raises a concern. No voting, no quorum, no scheduling a call.
             </p>
           </div>
           <div>
@@ -134,94 +132,21 @@ import ProposalBanner from '../components/ProposalBanner.astro'
       </div>
     </section>
 
-    <!-- Who it's for -->
-    <section id="for-whom" class="bg-warm-gray-100 py-20">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
-          Built for communities with shared economics.
-        </h2>
-        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="border border-warm-gray-200 rounded-xl p-6 bg-white">
-            <p class="text-sm font-semibold text-terracotta-500 uppercase tracking-wide">Bands &amp; Creatives</p>
-            <p class="mt-3 font-semibold text-bark-900 leading-snug">
-              "Stop the endless debate over who gets paid what after a gig."
-            </p>
-            <p class="mt-3 text-sm text-warm-gray-500 leading-relaxed">
-              Revenue from 5+ sources, splits decided by vibes, no record when someone leaves. Extol replaces the split sheet with an agreement everyone can see.
-            </p>
-          </div>
-          <div class="border border-warm-gray-200 rounded-xl p-6 bg-white">
-            <p class="text-sm font-semibold text-terracotta-500 uppercase tracking-wide">Open Source</p>
-            <p class="mt-3 font-semibold text-bark-900 leading-snug">
-              "Your contributors built something valuable. Can you show them what that's worth?"
-            </p>
-            <p class="mt-3 text-sm text-warm-gray-500 leading-relaxed">
-              Commit count is a terrible proxy for contribution. Code review, docs, community management — all invisible. Extol tracks what matters and shows how funds are split.
-            </p>
-          </div>
-          <div class="border border-warm-gray-200 rounded-xl p-6 bg-white">
-            <p class="text-sm font-semibold text-terracotta-500 uppercase tracking-wide">Sports Clubs</p>
-            <p class="mt-3 font-semibold text-bark-900 leading-snug">
-              "Every parent asks 'where does the money go?' Now you can show them."
-            </p>
-            <p class="mt-3 text-sm text-warm-gray-500 leading-relaxed">
-              One treasurer, no audits, no member-facing reporting. Extol shows the budget allocation to every member and generates 990-ready exports automatically.
-            </p>
-          </div>
-          <div class="border border-warm-gray-200 rounded-xl p-6 bg-white">
-            <p class="text-sm font-semibold text-terracotta-500 uppercase tracking-wide">Esports Teams</p>
-            <p class="mt-3 font-semibold text-bark-900 leading-snug">
-              "You won the tournament. Now who gets paid?"
-            </p>
-            <p class="mt-3 text-sm text-warm-gray-500 leading-relaxed">
-              Prize pools, sponsorships, content revenue — no dedicated tool handles the "who gets what" layer. Extol does.
-            </p>
-          </div>
-          <div class="border border-warm-gray-200 rounded-xl p-6 bg-white">
-            <p class="text-sm font-semibold text-terracotta-500 uppercase tracking-wide">Nonprofits</p>
-            <p class="mt-3 font-semibold text-bark-900 leading-snug">
-              "Board decisions that everyone can see and trust, without the politics."
-            </p>
-            <p class="mt-3 text-sm text-warm-gray-500 leading-relaxed">
-              Decisions are opaque, the chair makes unilateral calls, half the board has never read the bylaws. Extol makes every decision visible and recorded — automatic board minutes, budget transparency, and 990-ready reporting.
-            </p>
-          </div>
-        </div>
-        <p class="mt-6 text-sm text-warm-gray-500 text-center">
-          Something else? Freelancer collectives, podcast teams, co-ops — any group that shares money and makes decisions together.
-        </p>
-      </div>
-    </section>
-
-    <!-- Transparency without toil -->
+    <!-- Section 3: Sound familiar? -->
     <section class="py-20">
-      <div class="max-w-5xl mx-auto px-6">
+      <div class="max-w-3xl mx-auto px-6">
         <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
-          Transparency without toil.
+          Sound familiar?
         </h2>
-        <p class="mt-4 text-warm-gray-500 max-w-2xl leading-relaxed">
-          Most transparency tools fail because they ask organizers to do extra work to be transparent. Extol doesn't.
+        <p class="mt-6 text-lg font-medium text-bark-900">
+          Your group already does this. Just harder than it should be.
         </p>
-        <div class="mt-12 grid sm:grid-cols-3 gap-8">
-          <div>
-            <p class="font-semibold text-bark-900">It replaces the awkward conversation.</p>
-            <p class="mt-3 text-warm-gray-500 leading-relaxed">
-              "I think we should change the split" is uncomfortable in a group chat. A structured proposal with a consent window makes it safe and formal without being bureaucratic.
-            </p>
-          </div>
-          <div>
-            <p class="font-semibold text-bark-900">It replaces the shared spreadsheet.</p>
-            <p class="mt-3 text-warm-gray-500 leading-relaxed">
-              Every band, every OSS project, every nonprofit committee has a spreadsheet tracking who gets what. Extol replaces it with something that's decided together, not just shared.
-            </p>
-          </div>
-          <div>
-            <p class="font-semibold text-bark-900">It's less work than what you're doing now.</p>
-            <p class="mt-3 text-warm-gray-500 leading-relaxed">
-              Enter revenue, calculate shares, email everyone, wait for replies, mark as paid. Or: enter one number, everyone sees their share, mark as settled.
-            </p>
-          </div>
-        </div>
+        <p class="mt-4 text-warm-gray-500 leading-relaxed">
+          Someone tracks the money in a spreadsheet. Someone else texts the numbers. Everyone hopes the math is right and nobody disputes it. When someone leaves or a new member joins, the split conversation happens over text — or doesn't happen at all.
+        </p>
+        <p class="mt-4 text-warm-gray-500 leading-relaxed">
+          Extol replaces the spreadsheet, the awkward conversation, and the hope. One agreement, visible to everyone, changeable only when the group decides.
+        </p>
       </div>
     </section>
 
@@ -229,11 +154,11 @@ import ProposalBanner from '../components/ProposalBanner.astro'
     <section id="waitlist" class="bg-bark-900 py-20">
       <div class="max-w-5xl mx-auto px-6 text-center">
         <h2 class="font-serif text-3xl sm:text-4xl font-500 text-cream">
-          Your community already makes decisions together. <br />
-          Let everyone see how.
+          Your group already does the hard part. <br />
+          Extol makes sure none of it gets lost.
         </h2>
         <p class="mt-4 text-amber-200 max-w-xl mx-auto">
-          We're building Extol for communities ready to make their agreements visible. Join the waitlist to be first in.
+          We're building Extol for groups ready to make their work visible. Join the waitlist to be first in.
         </p>
         <div class="mt-8 flex justify-center">
           <form id="waitlist-form" class="flex flex-col sm:flex-row gap-3 w-full max-w-md">

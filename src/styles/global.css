@@ -17,7 +17,23 @@
   --color-warm-gray-100: #f0ebe4;
   --color-warm-gray-200: #ddd5ca;
   --color-warm-gray-500: #8a7e72;
+  --color-violet-50: #f5f3ff;
+  --color-violet-400: #8b5cf6;
+  --color-violet-500: #7c3aed;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Lora', Georgia, serif;
+}
+
+.scroll-snap-x-mandatory {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-snap-x-mandatory::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-snap-start {
+  scroll-snap-align: start;
 }

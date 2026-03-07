@@ -1,6 +1,5 @@
 ---
 import Base from '../layouts/Base.astro'
-import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
 interface Bullet {
@@ -18,10 +17,23 @@ interface Props {
 }
 
 const { vertical, headline, subheadline, bullets, cta, seoTitle } = Astro.props
+const slug = `/${vertical}`
 ---
 
 <Base title={seoTitle}>
-  <Header />
+  <header class="w-full border-b border-warm-gray-200">
+    <nav class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="/" class="text-xl font-semibold tracking-tight text-bark-900">
+        Extol
+      </a>
+      <a
+        href="#waitlist"
+        class="text-sm font-medium px-4 py-2 bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-600 transition-colors"
+      >
+        Join the waitlist
+      </a>
+    </nav>
+  </header>
 
   <main>
     <section class="max-w-3xl mx-auto px-6 pt-24 pb-16">
@@ -44,7 +56,7 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle } = Astro.props
       </div>
     </section>
 
-    <section class="bg-bark-900 py-20">
+    <section id="waitlist" class="bg-bark-900 py-20">
       <div class="max-w-3xl mx-auto px-6 text-center">
         <h2 class="font-serif text-3xl sm:text-4xl font-500 text-cream">
           {cta}
@@ -79,8 +91,10 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle } = Astro.props
       </div>
     </section>
 
-    <script define:vars={{ vertical }}>
+    <script define:vars={{ slug }}>
       const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2zk02ctXcnHm0C35ZnNoi0YJFhmVUqlgH7hbn44JHbXFY6iJwHwMsqKsw34E4VWXH/exec';
+
+      const params = new URLSearchParams(window.location.search);
 
       document.getElementById('waitlist-form')?.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -89,6 +103,17 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle } = Astro.props
         const form = document.getElementById('waitlist-form');
         const success = document.getElementById('waitlist-success');
         const error = document.getElementById('waitlist-error');
+
+        const payload = {
+          email,
+          slug,
+          utm_source: params.get('utm_source') || '',
+          utm_medium: params.get('utm_medium') || '',
+          utm_campaign: params.get('utm_campaign') || '',
+          utm_content: params.get('utm_content') || '',
+          ref: params.get('ref') || '',
+          timestamp: new Date().toISOString(),
+        };
 
         btn.textContent = 'Sending...';
         btn.disabled = true;
@@ -99,10 +124,18 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle } = Astro.props
             method: 'POST',
             mode: 'no-cors',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, source: vertical }),
+            body: JSON.stringify(payload),
           });
           form.classList.add('hidden');
           success.classList.remove('hidden');
+
+          if (typeof posthog !== 'undefined') {
+            posthog.capture('waitlist_signup', {
+              slug,
+              utm_source: payload.utm_source,
+              utm_campaign: payload.utm_campaign,
+            });
+          }
         } catch {
           error.classList.remove('hidden');
           btn.textContent = 'Join waitlist';

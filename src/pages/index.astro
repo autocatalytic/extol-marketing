@@ -265,6 +265,8 @@ import ProposalBanner from '../components/ProposalBanner.astro'
     <script>
       const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw2zk02ctXcnHm0C35ZnNoi0YJFhmVUqlgH7hbn44JHbXFY6iJwHwMsqKsw34E4VWXH/exec';
 
+      const params = new URLSearchParams(window.location.search);
+
       document.getElementById('waitlist-form')?.addEventListener('submit', async (e) => {
         e.preventDefault();
         const email = (document.getElementById('waitlist-email') as HTMLInputElement).value;
@@ -272,6 +274,17 @@ import ProposalBanner from '../components/ProposalBanner.astro'
         const form = document.getElementById('waitlist-form') as HTMLFormElement;
         const success = document.getElementById('waitlist-success')!;
         const error = document.getElementById('waitlist-error')!;
+
+        const payload = {
+          email,
+          slug: '/',
+          utm_source: params.get('utm_source') || '',
+          utm_medium: params.get('utm_medium') || '',
+          utm_campaign: params.get('utm_campaign') || '',
+          utm_content: params.get('utm_content') || '',
+          ref: params.get('ref') || '',
+          timestamp: new Date().toISOString(),
+        };
 
         btn.textContent = 'Sending...';
         btn.disabled = true;
@@ -282,10 +295,18 @@ import ProposalBanner from '../components/ProposalBanner.astro'
             method: 'POST',
             mode: 'no-cors',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email }),
+            body: JSON.stringify(payload),
           });
           form.classList.add('hidden');
           success.classList.remove('hidden');
+
+          if (typeof posthog !== 'undefined') {
+            posthog.capture('waitlist_signup', {
+              slug: '/',
+              utm_source: payload.utm_source,
+              utm_campaign: payload.utm_campaign,
+            });
+          }
         } catch {
           error.classList.remove('hidden');
           btn.textContent = 'Join waitlist';

@@ -9,18 +9,16 @@ import Footer from '../components/Footer.astro'
 
   <main class="max-w-3xl mx-auto px-6 py-16">
     <h1 class="font-serif text-3xl sm:text-4xl font-600 text-bark-900 mb-2">Privacy Policy</h1>
-    <p class="text-sm text-warm-gray-400 mb-1"><strong>Effective Date:</strong> March 2026</p>
-    <p class="text-sm text-warm-gray-400 mb-1"><strong>Last Updated:</strong> March 2026</p>
-    <p class="text-sm text-warm-gray-400 mb-1"><strong>Entity:</strong> Extol, Inc., a Wyoming corporation</p>
-    <p class="text-sm text-warm-gray-400 mb-12"><strong>Contact:</strong> <a href="mailto:privacy@extol.work" class="text-terracotta-500 underline">privacy@extol.work</a></p>
+    <p class="text-sm text-warm-gray-400 mb-1"><strong>Effective Date:</strong> March 13, 2026</p>
+    <p class="text-sm text-warm-gray-400 mb-12"><strong>Last Updated:</strong> March 13, 2026</p>
 
     <div class="prose">
       <h2>1. Introduction</h2>
       <p>
         Extol, Inc. ("Extol," "we," "us") operates the Extol platform, including
-        the Brij community event tool and Tempo attestation services
-        (collectively, the "Services"). This Privacy Policy describes how we
-        collect, use, store, share, and protect your personal information.
+        the Brij community event tool and associated services (collectively, the
+        "Services"). This Privacy Policy describes how we collect, use, store,
+        share, and protect your personal information.
       </p>
       <p>
         We are committed to transparency. We do not sell your personal
@@ -158,24 +156,29 @@ import Footer from '../components/Footer.astro'
         <li>Sell to third parties</li>
         <li>Target advertising</li>
         <li>Build profiles for sale to data brokers</li>
-        <li>Train AI models on your personal data without your explicit consent</li>
+        <li>Train AI models on your personal data without your explicit consent.
+          If your Collective votes to participate in community-initiated
+          research, you retain an individual right to opt out regardless of
+          the Collective's vote. Consent for AI training use is always
+          individual and opt-in — a Collective vote authorizes the Collective's
+          participation, not yours personally</li>
       </ul>
 
-      <h2>4. The Identity-to-Wallet Mapping</h2>
+      <h2>4. The Identity-to-Wallet Link</h2>
       <p>This section describes the most sensitive data we hold.</p>
 
       <h3>4.1 What It Is</h3>
       <p>
         If your community uses Extol governance features, we create and maintain
-        a mapping between your account identity (name, email) and your
-        blockchain wallet address. This mapping exists in Extol's middleware —
-        the proprietary layer between Brij and the public blockchain.
+        a link between your account identity (name, email) and your blockchain
+        wallet address. This link exists in Extol's secure infrastructure
+        between Brij and the public blockchain.
       </p>
 
       <h3>4.2 Why It Exists</h3>
-      <p>The mapping is necessary to:</p>
+      <p>The link is necessary to:</p>
       <ul>
-        <li>Link your community activity (recorded in Brij) to your on-chain
+        <li>Connect your community activity (recorded in Brij) to your on-chain
           attestations</li>
         <li>Display your governance token balance and voting weight in the app</li>
         <li>Enable you to participate in governance through a familiar interface
@@ -187,21 +190,21 @@ import Footer from '../components/Footer.astro'
         <li><strong>You</strong> — you can see your own wallet address and linked records</li>
         <li><strong>Extol operations staff</strong> — limited access for support and
           debugging, subject to internal access controls and audit logging</li>
-        <li><strong>No one else</strong> — we do not share the mapping with communities,
+        <li><strong>No one else</strong> — we do not share the link with communities,
           coordinators, other users, or third parties except as required by law
           (see Section 6)</li>
       </ul>
 
       <h3>4.4 How We Protect It</h3>
       <ul>
-        <li>The mapping is stored in encrypted form in our database</li>
+        <li>The link is stored in encrypted form in our database</li>
         <li>Access is restricted to authorized personnel with logged access</li>
-        <li>The mapping is the first data deleted when you delete your account</li>
+        <li>The link is the first data deleted when you delete your account</li>
       </ul>
 
       <h3>4.5 What Happens When You Delete</h3>
       <p>
-        When you delete your account, the identity-to-wallet mapping is
+        When you delete your account, the identity-to-wallet link is
         permanently destroyed. Your wallet address becomes an anonymous orphan
         on the blockchain — the on-chain records persist but are no longer
         linked to any identity in our systems. There is no backup copy and no
@@ -216,8 +219,9 @@ import Footer from '../components/Footer.astro'
         may be recorded on the Solana blockchain:
       </p>
       <ul>
-        <li>Hashed attestation records (a cryptographic hash of your activity
-          data — not the raw data itself)</li>
+        <li>Hashed attestation records (a one-way cryptographic hash of your
+          activity data — not the raw data itself; see Section 5.4 for details
+          on irreversibility)</li>
         <li>Governance token balances and staking positions</li>
         <li>Governance votes and proposals</li>
       </ul>
@@ -227,14 +231,14 @@ import Footer from '../components/Footer.astro'
       <ul>
         <li>Your name, email, or other personally identifying information</li>
         <li>Raw event data, attendance records, or contribution details</li>
-        <li>The identity-to-wallet mapping</li>
+        <li>The identity-to-wallet link</li>
       </ul>
 
       <h3>5.3 Permanence</h3>
       <p>
         On-chain data is public and permanent. It cannot be modified, deleted,
         or made private after recording. However, on-chain records use
-        pseudonymous wallet addresses — without the identity-to-wallet mapping
+        pseudonymous wallet addresses — without the identity-to-wallet link
         (which you can delete), they are not linked to a person.
       </p>
 
@@ -286,7 +290,48 @@ import Footer from '../components/Footer.astro'
         privacy policy.
       </p>
 
-      <h3>6.5 With Your Consent</h3>
+      <h3>6.5 Attestation API — Third-Party Verification</h3>
+      <p>
+        The Extol platform provides an Attestation API that allows authorized
+        third parties to verify your community participation credentials.
+      </p>
+      <p><strong>How it works:</strong></p>
+      <ul>
+        <li>A third party (e.g., a potential employer, platform, or licensing
+          partner) requests verification of your community participation
+          credentials</li>
+        <li>You receive a consent request specifying: who is asking, what data
+          they want to verify, and why</li>
+        <li>You explicitly approve or deny each verification request</li>
+        <li>If approved, the third party receives only the specific credential
+          data you authorized — not your full profile, activity history, or
+          wallet address</li>
+      </ul>
+      <p><strong>What is shared:</strong></p>
+      <ul>
+        <li>Community membership status (active/inactive)</li>
+        <li>Participation credentials (e.g., "verified contributor in
+          [Collective] for [duration]")</li>
+        <li>Governance participation level (if you consent)</li>
+        <li>Attestation scores or tiers (if you consent)</li>
+      </ul>
+      <p><strong>What is never shared through the API:</strong></p>
+      <ul>
+        <li>Your identity-to-wallet link</li>
+        <li>Raw activity records or attendance history</li>
+        <li>Other community memberships you have not authorized for disclosure</li>
+        <li>Governance vote content (how you voted — only that you participated)</li>
+      </ul>
+      <p><strong>Consent model:</strong></p>
+      <ul>
+        <li>Verification requires your explicit, per-request consent</li>
+        <li>You can revoke access to previously shared credentials at any time</li>
+        <li>A Collective's governance vote does not authorize sharing your
+          individual credentials — individual consent is always required</li>
+        <li>You can disable API access entirely in Settings</li>
+      </ul>
+
+      <h3>6.6 With Your Consent</h3>
       <p>
         We may share information for purposes not listed here with your
         explicit, informed consent.
@@ -371,20 +416,21 @@ import Footer from '../components/Footer.astro'
         all layers:
       </p>
       <p>
-        <strong>Brij layer:</strong> Complete deletion of your user record, all attendance
-        records, all contribution records, and all peer attestations. This is
-        a clean, irreversible wipe.
+        <strong>Your activity data:</strong> Complete deletion of your user record, all
+        attendance records, all contribution records, and all peer attestations.
+        This is a clean, irreversible wipe.
       </p>
       <p>
-        <strong>Extol middleware layer:</strong> Permanent deletion of the identity-to-wallet
-        mapping. Your wallet address becomes an anonymous orphan — it exists on
-        the blockchain but is connected to no one in our systems.
+        <strong>Your identity link:</strong> Permanent deletion of the connection between
+        your identity and your blockchain wallet address. Your wallet address
+        becomes anonymous — it exists on the blockchain but is connected to no
+        one in our systems.
       </p>
       <p>
-        <strong>On-chain layer:</strong> Attestations, token balances, and staking positions
+        <strong>On-chain records:</strong> Attestations, token balances, and staking positions
         on the public blockchain cannot be deleted. However, without the
-        identity-to-wallet mapping, these records are pseudonymous data that
-        cannot be linked back to you.
+        identity link, these records are pseudonymous data that cannot be linked
+        back to you.
       </p>
 
       <h3>8.2 What We Cannot Delete</h3>
@@ -397,8 +443,7 @@ import Footer from '../components/Footer.astro'
       <p>When you delete your account, we also:</p>
       <ul>
         <li>Remove your data from backups within 30 days</li>
-        <li>Purge any log entries containing your identity-to-wallet mapping
-          within 30 days</li>
+        <li>Purge any log entries containing your identity link within 30 days</li>
         <li>Retain only anonymized, aggregated data that cannot identify you</li>
       </ul>
 
@@ -418,7 +463,7 @@ import Footer from '../components/Footer.astro'
         <li>Access controls and authentication for all internal systems</li>
         <li>Regular security assessments</li>
         <li>Audit logging for access to sensitive data (especially the
-          identity-to-wallet mapping)</li>
+          identity-to-wallet link)</li>
       </ul>
 
       <h3>9.2 Breach Notification</h3>
@@ -447,7 +492,7 @@ import Footer from '../components/Footer.astro'
             <td>Until you delete your account</td>
           </tr>
           <tr>
-            <td>Identity-to-wallet mapping</td>
+            <td>Identity-to-wallet link</td>
             <td>Until you delete your account</td>
           </tr>
           <tr>
@@ -470,8 +515,47 @@ import Footer from '../components/Footer.astro'
             <td>Aggregated analytics</td>
             <td>Indefinite (anonymized, non-personal)</td>
           </tr>
+          <tr>
+            <td>Pre-community activity data</td>
+            <td>See Section 10.1 below</td>
+          </tr>
         </tbody>
       </table>
+
+      <h3>10.1 Pre-Community Activity Data</h3>
+      <p>
+        Brij allows coordinators to create events and track participation
+        before a formal community or Collective is formed. This early-stage
+        data — attendance records, contributions, and peer attestations
+        collected through Brij before any community governance structure
+        exists — is subject to the following rules:
+      </p>
+      <p>
+        <strong>If a community forms:</strong> Pre-community data becomes part of the
+        community's activity history, subject to all standard retention and
+        deletion policies.
+      </p>
+      <p>
+        <strong>If a community never forms:</strong> Pre-community activity data is retained
+        for 12 months from the last recorded activity. After 12 months of
+        inactivity with no community formation, we will:
+      </p>
+      <ul>
+        <li>Notify the coordinator and all participants with recorded activity</li>
+        <li>Provide a 30-day window to export data</li>
+        <li>Delete all pre-community activity data, including attendance records
+          and contribution records</li>
+      </ul>
+      <p>
+        <strong>Your rights during this period:</strong> Even before a community forms,
+        you retain full rights to:
+      </p>
+      <ul>
+        <li>View all records associated with your account</li>
+        <li>Delete your own records at any time</li>
+        <li>Export your data</li>
+        <li>Delete your account entirely</li>
+      </ul>
 
       <h2>11. Children's Privacy (COPPA)</h2>
 
@@ -502,13 +586,6 @@ import Footer from '../components/Footer.astro'
         <li>Refuse further data collection</li>
         <li>Contact us at <a href="mailto:privacy@extol.work">privacy@extol.work</a></li>
       </ul>
-
-      <h3>11.4 Penalties</h3>
-      <p>
-        COPPA violations carry penalties of $50,120 per violation (2024 rate,
-        adjusted annually by the FTC). We take compliance seriously and require
-        youth-serving communities to implement appropriate safeguards.
-      </p>
 
       <h2>12. Cookies and Tracking</h2>
 
@@ -559,8 +636,7 @@ import Footer from '../components/Footer.astro'
       <h2>15. Contact Us</h2>
       <p>For privacy questions, data requests, or concerns:</p>
       <p>
-        <strong>Email:</strong> <a href="mailto:privacy@extol.work">privacy@extol.work</a><br />
-        <strong>Mail:</strong> Extol, Inc., 30 N Gould St #62333, Sheridan, WY 82801
+        <strong>Email:</strong> <a href="mailto:privacy@extol.work">privacy@extol.work</a>
       </p>
       <p>
         For GDPR-related inquiries, you may also contact your local data

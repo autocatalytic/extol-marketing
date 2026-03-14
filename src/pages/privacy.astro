@@ -1,0 +1,628 @@
+---
+import Base from '../layouts/Base.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+---
+
+<Base title="Privacy Policy — Extol">
+  <Header />
+
+  <main class="max-w-3xl mx-auto px-6 py-16">
+    <h1 class="font-serif text-3xl sm:text-4xl font-600 text-bark-900 mb-2">Privacy Policy</h1>
+    <p class="text-sm text-warm-gray-400 mb-1"><strong>Effective Date:</strong> March 2026</p>
+    <p class="text-sm text-warm-gray-400 mb-1"><strong>Last Updated:</strong> March 2026</p>
+    <p class="text-sm text-warm-gray-400 mb-1"><strong>Entity:</strong> Extol, Inc., a Wyoming corporation</p>
+    <p class="text-sm text-warm-gray-400 mb-12"><strong>Contact:</strong> <a href="mailto:privacy@extol.work" class="text-terracotta-500 underline">privacy@extol.work</a></p>
+
+    <div class="prose">
+      <h2>1. Introduction</h2>
+      <p>
+        Extol, Inc. ("Extol," "we," "us") operates the Extol platform, including
+        the Brij community event tool and Tempo attestation services
+        (collectively, the "Services"). This Privacy Policy describes how we
+        collect, use, store, share, and protect your personal information.
+      </p>
+      <p>
+        We are committed to transparency. We do not sell your personal
+        information. We collect only what we need to provide the Services. You
+        can delete your account and data at any time.
+      </p>
+
+      <h2>2. Information We Collect</h2>
+
+      <h3>2.1 Information You Provide</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>When Collected</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Account information</strong></td>
+            <td>Registration</td>
+            <td>Name, email address, password hash — to create and secure your account</td>
+          </tr>
+          <tr>
+            <td><strong>Profile information</strong></td>
+            <td>Optional</td>
+            <td>Display name, bio, community affiliations — to identify you within communities</td>
+          </tr>
+          <tr>
+            <td><strong>Event data</strong></td>
+            <td>Event creation (coordinators)</td>
+            <td>Event name, description, date, location — to organize community activities</td>
+          </tr>
+          <tr>
+            <td><strong>Contribution records</strong></td>
+            <td>Activity tracking</td>
+            <td>Description of contributions, timestamps — to record your community participation</td>
+          </tr>
+          <tr>
+            <td><strong>Payment information</strong></td>
+            <td>Paid subscriptions</td>
+            <td>Processed by our payment processor; Extol does not store credit card numbers</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2.2 Information Created Through Use</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>When Created</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Attendance records</strong></td>
+            <td>Check-in at events</td>
+            <td>Records that you attended a community event — created by you or by a coordinator on your behalf</td>
+          </tr>
+          <tr>
+            <td><strong>Peer attestations</strong></td>
+            <td>Community interaction</td>
+            <td>Records where community members attest to your participation or contributions</td>
+          </tr>
+          <tr>
+            <td><strong>Governance activity</strong></td>
+            <td>Governance participation</td>
+            <td>Votes, proposals, staking actions — to operate community governance</td>
+          </tr>
+          <tr>
+            <td><strong>Wallet address</strong></td>
+            <td>Extol governance activation</td>
+            <td>A blockchain wallet address generated for on-chain attestations</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2.3 Information Collected Automatically</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Device and browser information</strong></td>
+            <td>User-Agent, IP address, device type — for security, fraud prevention, and service optimization</td>
+          </tr>
+          <tr>
+            <td><strong>Usage data</strong></td>
+            <td>Pages viewed, features used, session duration — to improve the Services</td>
+          </tr>
+          <tr>
+            <td><strong>Log data</strong></td>
+            <td>Server logs for debugging and security monitoring — retained for 90 days</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2.4 Information Created by Coordinators</h3>
+      <p>
+        Community coordinators may record attendance or activities on your
+        behalf. When this happens:
+      </p>
+      <ul>
+        <li>You are notified the first time a coordinator creates a record for you</li>
+        <li>You can review all records created on your behalf</li>
+        <li>You can delete any or all of these records at any time</li>
+      </ul>
+
+      <h2 id="data-use">3. How We Use Your Information</h2>
+      <p>We use your information to:</p>
+      <ol>
+        <li><strong>Provide the Services</strong> — account management, event coordination,
+          attendance tracking, governance tools</li>
+        <li><strong>Process on-chain attestations</strong> — translate your activity into
+          pseudonymous blockchain records (only if your community uses Extol
+          governance features)</li>
+        <li><strong>Communicate with you</strong> — service announcements, notifications about
+          records created on your behalf, responses to your inquiries</li>
+        <li><strong>Improve the Services</strong> — usage analytics, bug fixes, feature
+          development</li>
+        <li><strong>Ensure security</strong> — fraud detection, abuse prevention, account
+          protection</li>
+        <li><strong>Comply with legal obligations</strong> — tax reporting, law enforcement
+          requests, regulatory requirements</li>
+      </ol>
+      <p>We do <strong>not</strong> use your information to:</p>
+      <ul>
+        <li>Sell to third parties</li>
+        <li>Target advertising</li>
+        <li>Build profiles for sale to data brokers</li>
+        <li>Train AI models on your personal data without your explicit consent</li>
+      </ul>
+
+      <h2>4. The Identity-to-Wallet Mapping</h2>
+      <p>This section describes the most sensitive data we hold.</p>
+
+      <h3>4.1 What It Is</h3>
+      <p>
+        If your community uses Extol governance features, we create and maintain
+        a mapping between your account identity (name, email) and your
+        blockchain wallet address. This mapping exists in Extol's middleware —
+        the proprietary layer between Brij and the public blockchain.
+      </p>
+
+      <h3>4.2 Why It Exists</h3>
+      <p>The mapping is necessary to:</p>
+      <ul>
+        <li>Link your community activity (recorded in Brij) to your on-chain
+          attestations</li>
+        <li>Display your governance token balance and voting weight in the app</li>
+        <li>Enable you to participate in governance through a familiar interface
+          rather than directly interacting with blockchain tools</li>
+      </ul>
+
+      <h3>4.3 Who Can Access It</h3>
+      <ul>
+        <li><strong>You</strong> — you can see your own wallet address and linked records</li>
+        <li><strong>Extol operations staff</strong> — limited access for support and
+          debugging, subject to internal access controls and audit logging</li>
+        <li><strong>No one else</strong> — we do not share the mapping with communities,
+          coordinators, other users, or third parties except as required by law
+          (see Section 6)</li>
+      </ul>
+
+      <h3>4.4 How We Protect It</h3>
+      <ul>
+        <li>The mapping is stored in encrypted form in our database</li>
+        <li>Access is restricted to authorized personnel with logged access</li>
+        <li>The mapping is the first data deleted when you delete your account</li>
+      </ul>
+
+      <h3>4.5 What Happens When You Delete</h3>
+      <p>
+        When you delete your account, the identity-to-wallet mapping is
+        permanently destroyed. Your wallet address becomes an anonymous orphan
+        on the blockchain — the on-chain records persist but are no longer
+        linked to any identity in our systems. There is no backup copy and no
+        way to re-link. See Section 8 for full deletion details.
+      </p>
+
+      <h2>5. On-Chain Data</h2>
+
+      <h3>5.1 What Goes On-Chain</h3>
+      <p>
+        If your community uses Extol governance features, the following data
+        may be recorded on the Solana blockchain:
+      </p>
+      <ul>
+        <li>Hashed attestation records (a cryptographic hash of your activity
+          data — not the raw data itself)</li>
+        <li>Governance token balances and staking positions</li>
+        <li>Governance votes and proposals</li>
+      </ul>
+
+      <h3>5.2 What Does NOT Go On-Chain</h3>
+      <p>The following data is <strong>never</strong> written to the blockchain:</p>
+      <ul>
+        <li>Your name, email, or other personally identifying information</li>
+        <li>Raw event data, attendance records, or contribution details</li>
+        <li>The identity-to-wallet mapping</li>
+      </ul>
+
+      <h3>5.3 Permanence</h3>
+      <p>
+        On-chain data is public and permanent. It cannot be modified, deleted,
+        or made private after recording. However, on-chain records use
+        pseudonymous wallet addresses — without the identity-to-wallet mapping
+        (which you can delete), they are not linked to a person.
+      </p>
+
+      <h3>5.4 Hashing</h3>
+      <p>
+        Attestation data recorded on-chain is a one-way cryptographic hash. The
+        hash cannot be reversed to reveal the underlying data. Once the
+        off-chain source record is deleted, the hash is a meaningless string
+        with no reversibility path.
+      </p>
+
+      <h2>6. When We Share Your Information</h2>
+      <p>We share personal information only in these circumstances:</p>
+
+      <h3>6.1 With Your Community</h3>
+      <p>
+        Your community coordinators and members can see information you make
+        available through your community participation — your display name,
+        contributions, attendance, and governance activity. This is the purpose
+        of the Services.
+      </p>
+
+      <h3>6.2 Service Providers</h3>
+      <p>We use third-party service providers for:</p>
+      <ul>
+        <li>Cloud hosting and infrastructure</li>
+        <li>Payment processing</li>
+        <li>Email delivery</li>
+        <li>Analytics (aggregated, not individual)</li>
+      </ul>
+      <p>
+        Service providers are contractually bound to use your information only
+        to provide services to Extol and are prohibited from using it for their
+        own purposes.
+      </p>
+
+      <h3>6.3 Legal Requirements</h3>
+      <p>
+        We may disclose personal information if required by law, subpoena,
+        court order, or government request. When legally permitted, we will
+        notify you before disclosure.
+      </p>
+
+      <h3>6.4 Business Transfers</h3>
+      <p>
+        In the event of a merger, acquisition, or sale of assets, your
+        information may be transferred as part of the transaction. We will
+        notify you before your information becomes subject to a different
+        privacy policy.
+      </p>
+
+      <h3>6.5 With Your Consent</h3>
+      <p>
+        We may share information for purposes not listed here with your
+        explicit, informed consent.
+      </p>
+
+      <h2>7. Your Rights</h2>
+
+      <h3>7.1 Access</h3>
+      <p>
+        You can access all personal information we hold about you through your
+        account settings. This includes attendance records, contribution
+        records, peer attestations, and (if applicable) your wallet address.
+      </p>
+
+      <h3>7.2 Correction</h3>
+      <p>You can correct your account information at any time through Settings.</p>
+
+      <h3>7.3 Deletion</h3>
+      <p>
+        You can delete your account and all associated data at any time. See
+        Section 8.
+      </p>
+
+      <h3>7.4 Data Portability</h3>
+      <p>
+        You can export your data in a standard, machine-readable format (JSON)
+        through Settings. This includes your activity history, contributions,
+        and attestation records.
+      </p>
+
+      <h3>7.5 Opt-Out of On-Chain Features</h3>
+      <p>
+        If your community activates Extol governance features, you can opt out
+        of on-chain attestations while remaining a community member using Brij
+        features.
+      </p>
+
+      <h3>7.6 California Residents (CCPA/CPRA)</h3>
+      <p>
+        If you are a California resident, you have additional rights under the
+        California Consumer Privacy Act, as amended by the California Privacy
+        Rights Act:
+      </p>
+      <ul>
+        <li><strong>Right to know</strong> what personal information we collect, use, and share</li>
+        <li><strong>Right to delete</strong> your personal information</li>
+        <li><strong>Right to opt out</strong> of the sale of personal information (we do not
+          sell personal information)</li>
+        <li><strong>Right to non-discrimination</strong> for exercising your privacy rights</li>
+      </ul>
+      <p>
+        To exercise these rights, contact <a href="mailto:privacy@extol.work">privacy@extol.work</a> or use the
+        self-service options in Settings.
+      </p>
+
+      <h3>7.7 EU/EEA Residents (GDPR)</h3>
+      <p>
+        If you are located in the European Union or European Economic Area, you
+        have additional rights under the General Data Protection Regulation:
+      </p>
+      <ul>
+        <li><strong>Legal basis:</strong> We process your data based on (a) your consent,
+          (b) performance of our contract with you (these Terms), (c) our
+          legitimate interests in operating the Services, or (d) compliance
+          with legal obligations</li>
+        <li><strong>Right to restrict processing</strong> — you can ask us to limit how we
+          use your data</li>
+        <li><strong>Right to object</strong> — you can object to processing based on
+          legitimate interests</li>
+        <li><strong>Right to lodge a complaint</strong> with your local data protection
+          authority</li>
+        <li><strong>Data transfers</strong> — we transfer data from the EU/EEA to the United
+          States. We use Standard Contractual Clauses to protect your data
+          during transfer.</li>
+      </ul>
+
+      <h2 id="deletion">8. Data Deletion</h2>
+
+      <h3>8.1 How Deletion Works</h3>
+      <p>
+        When you delete your account, a single action triggers deletion across
+        all layers:
+      </p>
+      <p>
+        <strong>Brij layer:</strong> Complete deletion of your user record, all attendance
+        records, all contribution records, and all peer attestations. This is
+        a clean, irreversible wipe.
+      </p>
+      <p>
+        <strong>Extol middleware layer:</strong> Permanent deletion of the identity-to-wallet
+        mapping. Your wallet address becomes an anonymous orphan — it exists on
+        the blockchain but is connected to no one in our systems.
+      </p>
+      <p>
+        <strong>On-chain layer:</strong> Attestations, token balances, and staking positions
+        on the public blockchain cannot be deleted. However, without the
+        identity-to-wallet mapping, these records are pseudonymous data that
+        cannot be linked back to you.
+      </p>
+
+      <h3>8.2 What We Cannot Delete</h3>
+      <p>
+        We cannot delete data recorded on a public blockchain. We can — and do —
+        delete the only link between that data and your identity.
+      </p>
+
+      <h3>8.3 Backup and Log Purge</h3>
+      <p>When you delete your account, we also:</p>
+      <ul>
+        <li>Remove your data from backups within 30 days</li>
+        <li>Purge any log entries containing your identity-to-wallet mapping
+          within 30 days</li>
+        <li>Retain only anonymized, aggregated data that cannot identify you</li>
+      </ul>
+
+      <h3>8.4 Coordinator-Created Records</h3>
+      <p>
+        Records that a coordinator created on your behalf are deleted when you
+        delete your account. The coordinator is not notified of individual
+        record deletions.
+      </p>
+
+      <h2>9. Data Security</h2>
+
+      <h3>9.1 Measures</h3>
+      <p>We implement industry-standard security measures including:</p>
+      <ul>
+        <li>Encryption in transit (TLS) and at rest (AES-256)</li>
+        <li>Access controls and authentication for all internal systems</li>
+        <li>Regular security assessments</li>
+        <li>Audit logging for access to sensitive data (especially the
+          identity-to-wallet mapping)</li>
+      </ul>
+
+      <h3>9.2 Breach Notification</h3>
+      <p>
+        In the event of a data breach affecting your personal information, we
+        will notify you within 72 hours of becoming aware of the breach, as
+        required by applicable law. Notification will include the nature of the
+        breach, the data affected, and steps we are taking in response.
+      </p>
+
+      <h2>10. Data Retention</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Retention Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Account information</td>
+            <td>Until you delete your account</td>
+          </tr>
+          <tr>
+            <td>Activity records (Brij)</td>
+            <td>Until you delete your account</td>
+          </tr>
+          <tr>
+            <td>Identity-to-wallet mapping</td>
+            <td>Until you delete your account</td>
+          </tr>
+          <tr>
+            <td>On-chain data</td>
+            <td>Permanent (blockchain)</td>
+          </tr>
+          <tr>
+            <td>Server logs</td>
+            <td>90 days</td>
+          </tr>
+          <tr>
+            <td>Backup copies</td>
+            <td>Purged within 30 days of account deletion</td>
+          </tr>
+          <tr>
+            <td>Payment records</td>
+            <td>As required by tax law (typically 7 years)</td>
+          </tr>
+          <tr>
+            <td>Aggregated analytics</td>
+            <td>Indefinite (anonymized, non-personal)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>11. Children's Privacy (COPPA)</h2>
+
+      <h3>11.1 General Policy</h3>
+      <p>
+        The Services are not directed to children under 13. We do not knowingly
+        collect personal information from children under 13 without verifiable
+        parental consent.
+      </p>
+
+      <h3>11.2 Youth-Serving Communities</h3>
+      <p>Communities that serve participants under 13 must comply with COPPA by:</p>
+      <ul>
+        <li>Obtaining verifiable parental consent before any data collection</li>
+        <li>Providing parents with notice of what data is collected and how it
+          is used</li>
+        <li>Allowing parents to review, delete, or refuse further collection of
+          their child's data</li>
+        <li>Not conditioning participation on the child providing more data than
+          necessary</li>
+      </ul>
+
+      <h3>11.3 Parental Rights</h3>
+      <p>Parents of children under 13 can:</p>
+      <ul>
+        <li>Review all data collected about their child</li>
+        <li>Request deletion of their child's data</li>
+        <li>Refuse further data collection</li>
+        <li>Contact us at <a href="mailto:privacy@extol.work">privacy@extol.work</a></li>
+      </ul>
+
+      <h3>11.4 Penalties</h3>
+      <p>
+        COPPA violations carry penalties of $50,120 per violation (2024 rate,
+        adjusted annually by the FTC). We take compliance seriously and require
+        youth-serving communities to implement appropriate safeguards.
+      </p>
+
+      <h2>12. Cookies and Tracking</h2>
+
+      <h3>12.1 Essential Cookies</h3>
+      <p>We use essential cookies for:</p>
+      <ul>
+        <li>Session management (keeping you logged in)</li>
+        <li>Security (CSRF protection)</li>
+        <li>Preferences (language, display settings)</li>
+      </ul>
+      <p>
+        These cookies are necessary for the Services to function and cannot be
+        disabled.
+      </p>
+
+      <h3>12.2 Analytics</h3>
+      <p>
+        We use privacy-respecting analytics to understand how the Services are
+        used. We do not use third-party advertising trackers. Analytics data is
+        aggregated and cannot identify individual users.
+      </p>
+
+      <h3>12.3 No Third-Party Advertising</h3>
+      <p>
+        We do not serve third-party advertisements. We do not share data with
+        advertising networks. We do not track users across other websites.
+      </p>
+
+      <h2>13. International Data Transfers</h2>
+      <p>
+        Extol is based in the United States. If you access the Services from
+        outside the US, your data is transferred to and processed in the US.
+      </p>
+      <p>
+        For EU/EEA users, we use Standard Contractual Clauses approved by the
+        European Commission to ensure adequate protection of your data during
+        transfer.
+      </p>
+
+      <h2>14. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Material changes
+        will be communicated with at least 30 days' advance notice through the
+        platform or by email. The "Last Updated" date at the top reflects the
+        most recent revision.
+      </p>
+
+      <h2>15. Contact Us</h2>
+      <p>For privacy questions, data requests, or concerns:</p>
+      <p>
+        <strong>Email:</strong> <a href="mailto:privacy@extol.work">privacy@extol.work</a><br />
+        <strong>Mail:</strong> Extol, Inc., 30 N Gould St #62333, Sheridan, WY 82801
+      </p>
+      <p>
+        For GDPR-related inquiries, you may also contact your local data
+        protection authority.
+      </p>
+
+      <p class="text-sm"><em>Copyright 2026 Extol, Inc. All rights reserved.</em></p>
+    </div>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  .prose h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-bark-900, #2C1810);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-bark-900, #2C1810);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose p, .prose li, .prose td {
+    color: var(--color-warm-gray-500, #6B5E54);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .prose ul, .prose ol {
+    padding-left: 1.25rem;
+    list-style-type: disc;
+  }
+  .prose ol {
+    list-style-type: decimal;
+  }
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+  .prose a {
+    color: var(--color-terracotta-500, #C75B3F);
+    text-decoration: underline;
+  }
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+  .prose th {
+    text-align: left;
+    font-weight: 600;
+    color: var(--color-bark-900, #2C1810);
+    padding: 0.5rem 1rem 0.5rem 0;
+    border-bottom: 2px solid var(--color-warm-gray-200, #E5DDD5);
+  }
+  .prose td {
+    padding: 0.5rem 1rem 0.5rem 0;
+    border-bottom: 1px solid var(--color-warm-gray-200, #E5DDD5);
+    vertical-align: top;
+  }
+</style>

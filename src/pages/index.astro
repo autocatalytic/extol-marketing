@@ -7,31 +7,30 @@ import Ledger from '../components/Ledger.astro'
 import ProposalBanner from '../components/ProposalBanner.astro'
 ---
 
-<Base title="Extol — The ledger for everything people build together">
+<Base title="Extol — Community value, made visible">
   <Header />
 
   <main>
     <!-- Hero -->
     <section class="max-w-5xl mx-auto px-6 pt-24 pb-20">
       <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-600 leading-tight text-bark-900 max-w-4xl">
-        The most valuable work happens together. <br />
-        <span class="text-terracotta-500">The economy just hasn't caught up.</span>
+        Community value, made visible.
       </h1>
       <p class="mt-6 text-lg sm:text-xl text-warm-gray-500 max-w-2xl leading-relaxed">
-        People create enormous value together — splitting revenue, running budgets, showing up week after week. But the tools that track value were built for companies, not communities. Extol is the ledger for everything people build together.
+        People create enormous value together — splitting revenue, running budgets, showing up week after week. But the tools that track value were built for companies, not communities. Extol is changing that.
       </p>
       <div class="mt-10 flex flex-col sm:flex-row gap-4">
         <a
-          href="#waitlist"
+          href="https://brij.extol.work"
           class="inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-600 transition-colors"
         >
-          Join the waitlist
+          Start free with brij &rarr;
         </a>
         <a
           href="#how-it-works"
           class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-bark-800 border border-warm-gray-200 rounded-lg hover:bg-warm-gray-100 transition-colors"
         >
-          How it works
+          See how it works &darr;
         </a>
       </div>
     </section>
@@ -46,50 +45,101 @@ import ProposalBanner from '../components/ProposalBanner.astro'
       <div class="mt-10 max-w-5xl mx-auto px-6">
         <div class="flex gap-4 overflow-x-auto scroll-snap-x-mandatory pb-4 -mx-6 px-6" style="-webkit-overflow-scrolling: touch; scrollbar-width: none;">
           <!-- Doing things together — invitation card -->
-          <a href="https://app.extol.work" class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-violet-50 border-l-4 border-violet-400 scroll-snap-start hover:border-violet-600 transition-colors">
+          <a href="https://brij.extol.work" class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-violet-50 border-l-4 border-violet-400 scroll-snap-start hover:border-violet-600 transition-colors">
             <p class="font-semibold text-violet-500">Doing things together</p>
             <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
               Cleanups, practices, jam sessions, Saturday hikes. It all counts.
             </p>
           </a>
           <!-- Bands -->
-          <a href="/bands" class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start hover:border-terracotta-400 transition-colors">
+          <div class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start">
             <p class="font-semibold text-bark-900">Bands &amp; Creatives</p>
             <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
               Four people created something valuable. Extol makes sure all four are accounted for.
             </p>
-          </a>
+          </div>
           <!-- Nonprofits -->
-          <a href="/nonprofits" class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start hover:border-terracotta-400 transition-colors">
+          <div class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start">
             <p class="font-semibold text-bark-900">Nonprofits</p>
             <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
-              Volunteers, donors, board members — all creating value for their communities. Extol gives them a shared record.
+              Volunteers, donors, board members — all creating value. Extol gives them a shared record.
             </p>
-          </a>
+          </div>
           <!-- Sports Clubs -->
-          <a href="/clubs" class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start hover:border-terracotta-400 transition-colors">
+          <div class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start">
             <p class="font-semibold text-bark-900">Sports Clubs</p>
             <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
               Parents and coaches create enormous community value. Extol shows where it goes.
             </p>
-          </a>
+          </div>
           <!-- Open Source -->
-          <a href="/oss" class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start hover:border-terracotta-400 transition-colors">
+          <div class="flex-shrink-0 w-[280px] rounded-xl p-6 bg-white border border-warm-gray-200 scroll-snap-start">
             <p class="font-semibold text-bark-900">Open Source</p>
             <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
               Thousands of people built something valuable. Extol tracks what a commit log can't.
             </p>
-          </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 2: Here's what it looks like -->
+    <!-- Section 2: Start free with brij -->
+    <section class="py-20" style="background-color: #FDF8F0;">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
+          Your group is already doing the work. <span class="text-violet-600">brij makes it visible.</span>
+        </h2>
+        <p class="mt-4 text-warm-gray-500 max-w-2xl leading-relaxed">
+          brij is free — create a group, track activities, and start building a record of who shows up. No spreadsheets, no data entry. Just keep showing up.
+        </p>
+
+        <div class="mt-12 grid sm:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 border border-warm-gray-200">
+            <div class="w-10 h-10 rounded-lg bg-violet-50 border border-violet-200 flex items-center justify-center text-violet-600 text-lg mb-4">+</div>
+            <h3 class="font-semibold text-bark-900">One tap to start</h3>
+            <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
+              Create an activity, share a link. People check in.
+            </p>
+          </div>
+          <div class="bg-white rounded-xl p-6 border border-warm-gray-200">
+            <div class="w-10 h-10 rounded-lg bg-violet-50 border border-violet-200 flex items-center justify-center text-violet-600 text-lg mb-4">&#10003;</div>
+            <h3 class="font-semibold text-bark-900">Everyone gets a card</h3>
+            <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
+              Shareable Extol Cards — proof you were there, together.
+            </p>
+          </div>
+          <div class="bg-white rounded-xl p-6 border border-warm-gray-200">
+            <div class="w-10 h-10 rounded-lg bg-violet-50 border border-violet-200 flex items-center justify-center text-violet-600 text-lg mb-4">&rarr;</div>
+            <h3 class="font-semibold text-bark-900">History builds itself</h3>
+            <p class="mt-2 text-sm text-warm-gray-500 leading-relaxed">
+              Your group's journal captures the work between events. No logging, no timekeeping.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 text-center">
+          <a
+            href="https://brij.extol.work"
+            class="inline-flex items-center justify-center px-8 py-3 text-base font-medium bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors"
+          >
+            Start free with brij &rarr;
+          </a>
+          <p class="mt-3 text-sm text-warm-gray-400">
+            <span class="font-semibold text-warm-gray-500">847 activities</span> recorded by <span class="font-semibold text-warm-gray-500">142 crews</span> on brij
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Where it's going -->
     <section id="how-it-works" class="bg-warm-gray-100 py-20">
       <div class="max-w-5xl mx-auto px-6">
         <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
-          Here's what it looks like. <span class="text-red-700 text-2xl sm:text-3xl">Coming soon</span>
+          When your group is ready, Extol adds structure.
         </h2>
+        <p class="mt-4 text-warm-gray-500 max-w-2xl leading-relaxed">
+          brij tracks who shows up. Extol turns that into shared agreements, transparent economics, and consent-based decisions. Everything you've built in brij carries forward.
+        </p>
 
         <!-- The Agreement -->
         <div class="mt-12 grid lg:grid-cols-2 gap-12 items-start">
@@ -129,10 +179,12 @@ import ProposalBanner from '../components/ProposalBanner.astro'
             <ProposalBanner />
           </div>
         </div>
+
+        <p class="mt-12 text-center text-sm font-medium" style="color: #8B6548;">Coming soon</p>
       </div>
     </section>
 
-    <!-- Section 3: Sound familiar? -->
+    <!-- Section 4: Sound familiar? -->
     <section class="py-20">
       <div class="max-w-3xl mx-auto px-6">
         <h2 class="font-serif text-3xl sm:text-4xl font-500 text-bark-900">
@@ -145,100 +197,31 @@ import ProposalBanner from '../components/ProposalBanner.astro'
           Someone tracks the money in a spreadsheet. Someone else texts the numbers. Everyone hopes the math is right and nobody disputes it. When someone leaves or a new member joins, the split conversation happens over text — or doesn't happen at all.
         </p>
         <p class="mt-4 text-warm-gray-500 leading-relaxed">
-          Extol replaces the spreadsheet, the awkward conversation, and the hope. One agreement, visible to everyone, changeable only when the group decides.
+          Extol replaces the spreadsheet, the awkward conversation, and the hope. One agreement, visible to everyone, changeable only when the group decides. And it starts with brij — free, today.
         </p>
       </div>
     </section>
 
-    <!-- Waitlist -->
-    <section id="waitlist" class="bg-bark-900 py-20">
+    <!-- Close -->
+    <section class="bg-bark-900 py-20">
       <div class="max-w-5xl mx-auto px-6 text-center">
         <h2 class="font-serif text-3xl sm:text-4xl font-500 text-cream">
-          Your group already does the hard part. <br />
-          Extol makes sure none of it gets lost.
+          The value was always there. <br />
+          Now you can see it.
         </h2>
         <p class="mt-4 text-amber-200 max-w-xl mx-auto">
-          We make the invisible work that holds communities together visible, so the people doing it actually get credit. Join the waitlist to be first in.
+          We make the invisible work that holds communities together visible, so the people doing it actually get credit.
         </p>
-        <div class="mt-8 flex justify-center">
-          <form id="waitlist-form" class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
-            <input
-              id="waitlist-email"
-              type="email"
-              placeholder="you@community.org"
-              required
-              class="flex-1 px-4 py-3 rounded-lg bg-bark-800 text-cream placeholder-warm-gray-500 border border-bark-700 focus:outline-none focus:border-terracotta-400"
-            />
-            <button
-              type="submit"
-              id="waitlist-btn"
-              class="px-6 py-3 font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-400 transition-colors"
-            >
-              Join waitlist
-            </button>
-          </form>
-          <p id="waitlist-success" class="hidden mt-4 text-amber-200">
-            You're on the list. We'll be in touch.
-          </p>
-          <p id="waitlist-error" class="hidden mt-4 text-terracotta-400">
-            Something went wrong. Please try again.
-          </p>
+        <div class="mt-8">
+          <a
+            href="https://brij.extol.work"
+            class="inline-flex items-center justify-center px-8 py-3 text-base font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-400 transition-colors"
+          >
+            Start free with brij &rarr;
+          </a>
         </div>
       </div>
     </section>
-
-    <script>
-      const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzq9UxvGGIyKExjc6UJjh3jqRObDTVDnCIFlTAT6vSMKY_gi9ivaqOj9G4L9mvUyLGN/exec';
-
-      const params = new URLSearchParams(window.location.search);
-
-      document.getElementById('waitlist-form')?.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = (document.getElementById('waitlist-email') as HTMLInputElement).value;
-        const btn = document.getElementById('waitlist-btn') as HTMLButtonElement;
-        const form = document.getElementById('waitlist-form') as HTMLFormElement;
-        const success = document.getElementById('waitlist-success')!;
-        const error = document.getElementById('waitlist-error')!;
-
-        const payload = {
-          email,
-          slug: '/',
-          utm_source: params.get('utm_source') || '',
-          utm_medium: params.get('utm_medium') || '',
-          utm_campaign: params.get('utm_campaign') || '',
-          utm_content: params.get('utm_content') || '',
-          ref: params.get('ref') || '',
-          timestamp: new Date().toISOString(),
-        };
-
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
-        error.classList.add('hidden');
-
-        try {
-          await fetch(APPS_SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
-          });
-          form.classList.add('hidden');
-          success.classList.remove('hidden');
-
-          if (typeof posthog !== 'undefined') {
-            posthog.capture('waitlist_signup', {
-              slug: '/',
-              utm_source: payload.utm_source,
-              utm_campaign: payload.utm_campaign,
-            });
-          }
-        } catch {
-          error.classList.remove('hidden');
-          btn.textContent = 'Join waitlist';
-          btn.disabled = false;
-        }
-      });
-    </script>
   </main>
 
   <Footer />

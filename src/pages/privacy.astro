@@ -13,7 +13,7 @@ import Footer from '../components/Footer.astro'
     <p class="text-sm text-warm-gray-400 mb-12"><strong>Last Updated:</strong> March 13, 2026</p>
 
     <div class="prose">
-      <h2>1. Introduction</h2>
+      <h2 id="introduction">1. Introduction</h2>
       <p>
         Extol, Inc. ("Extol," "we," "us") operates the Extol platform, including
         the Brij community event tool and associated services (collectively, the
@@ -26,7 +26,7 @@ import Footer from '../components/Footer.astro'
         can delete your account and data at any time.
       </p>
 
-      <h2>2. Information We Collect</h2>
+      <h2 id="information-we-collect">2. Information We Collect</h2>
 
       <h3>2.1 Information You Provide</h3>
       <table>
@@ -164,7 +164,7 @@ import Footer from '../components/Footer.astro'
           participation, not yours personally</li>
       </ul>
 
-      <h2>4. The Identity-to-Wallet Link</h2>
+      <h2 id="identity-to-wallet-link">4. The Identity-to-Wallet Link</h2>
       <p>This section describes the most sensitive data we hold.</p>
 
       <h3>4.1 What It Is</h3>
@@ -211,7 +211,7 @@ import Footer from '../components/Footer.astro'
         way to re-link. See Section 8 for full deletion details.
       </p>
 
-      <h2>5. On-Chain Data</h2>
+      <h2 id="on-chain-data">5. On-Chain Data</h2>
 
       <h3>5.1 What Goes On-Chain</h3>
       <p>
@@ -222,9 +222,19 @@ import Footer from '../components/Footer.astro'
         <li>Hashed attestation records (a one-way cryptographic hash of your
           activity data — not the raw data itself; see Section 5.4 for details
           on irreversibility)</li>
-        <li>Governance token balances and staking positions</li>
+        <li><strong>Standing positions</strong> — your permanently locked governance
+          commitment to each community (amount and duration)</li>
+        <li><strong>Credit balances</strong> — your portable balance within the Extol network
+          (recorded as token balances, not as dollar amounts)</li>
         <li>Governance votes and proposals</li>
       </ul>
+      <p>
+        Standing and Credit are recorded as on-chain token positions. Standing
+        represents permanent lock positions that cannot be reversed. Credit
+        balances reflect your current portable balance and may change over time
+        due to earning, spending, or depreciation. Neither Standing nor Credit
+        has a public market price or exchange rate to any currency.
+      </p>
 
       <h3>5.2 What Does NOT Go On-Chain</h3>
       <p>The following data is <strong>never</strong> written to the blockchain:</p>
@@ -250,7 +260,7 @@ import Footer from '../components/Footer.astro'
         with no reversibility path.
       </p>
 
-      <h2>6. When We Share Your Information</h2>
+      <h2 id="sharing">6. When We Share Your Information</h2>
       <p>We share personal information only in these circumstances:</p>
 
       <h3>6.1 With Your Community</h3>
@@ -337,7 +347,7 @@ import Footer from '../components/Footer.astro'
         explicit, informed consent.
       </p>
 
-      <h2>7. Your Rights</h2>
+      <h2 id="your-rights">7. Your Rights</h2>
 
       <h3>7.1 Access</h3>
       <p>
@@ -454,7 +464,7 @@ import Footer from '../components/Footer.astro'
         record deletions.
       </p>
 
-      <h2>9. Data Security</h2>
+      <h2 id="data-security">9. Data Security</h2>
 
       <h3>9.1 Measures</h3>
       <p>We implement industry-standard security measures including:</p>
@@ -474,7 +484,7 @@ import Footer from '../components/Footer.astro'
         breach, the data affected, and steps we are taking in response.
       </p>
 
-      <h2>10. Data Retention</h2>
+      <h2 id="data-retention">10. Data Retention</h2>
       <table>
         <thead>
           <tr>
@@ -557,7 +567,7 @@ import Footer from '../components/Footer.astro'
         <li>Delete your account entirely</li>
       </ul>
 
-      <h2>11. Children's Privacy (COPPA)</h2>
+      <h2 id="childrens-privacy">11. Children's Privacy (COPPA)</h2>
 
       <h3>11.1 General Policy</h3>
       <p>
@@ -587,7 +597,7 @@ import Footer from '../components/Footer.astro'
         <li>Contact us at <a href="mailto:privacy@extol.work">privacy@extol.work</a></li>
       </ul>
 
-      <h2>12. Cookies and Tracking</h2>
+      <h2 id="cookies-and-tracking">12. Cookies and Tracking</h2>
 
       <h3>12.1 Essential Cookies</h3>
       <p>We use essential cookies for:</p>
@@ -614,7 +624,7 @@ import Footer from '../components/Footer.astro'
         advertising networks. We do not track users across other websites.
       </p>
 
-      <h2>13. International Data Transfers</h2>
+      <h2 id="international-data-transfers">13. International Data Transfers</h2>
       <p>
         Extol is based in the United States. If you access the Services from
         outside the US, your data is transferred to and processed in the US.
@@ -625,7 +635,7 @@ import Footer from '../components/Footer.astro'
         transfer.
       </p>
 
-      <h2>14. Changes to This Policy</h2>
+      <h2 id="changes">14. Changes to This Policy</h2>
       <p>
         We may update this Privacy Policy from time to time. Material changes
         will be communicated with at least 30 days' advance notice through the
@@ -633,7 +643,7 @@ import Footer from '../components/Footer.astro'
         most recent revision.
       </p>
 
-      <h2>15. Contact Us</h2>
+      <h2 id="contact">15. Contact Us</h2>
       <p>For privacy questions, data requests, or concerns:</p>
       <p>
         <strong>Email:</strong> <a href="mailto:privacy@extol.work">privacy@extol.work</a>

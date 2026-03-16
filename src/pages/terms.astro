@@ -13,7 +13,7 @@ import Footer from '../components/Footer.astro'
     <p class="text-sm text-warm-gray-400 mb-12"><strong>Last Updated:</strong> March 13, 2026</p>
 
     <div class="prose">
-      <h2>1. Agreement to Terms</h2>
+      <h2 id="agreement-to-terms">1. Agreement to Terms</h2>
       <p>
         By accessing or using the Extol platform, including the Brij community
         event tool and any associated services (collectively, the "Services"),
@@ -25,7 +25,7 @@ import Footer from '../components/Footer.astro'
         the individual or entity accessing the Services.
       </p>
 
-      <h2>2. Description of Services</h2>
+      <h2 id="description-of-services">2. Description of Services</h2>
 
       <h3>2.1 Brij</h3>
       <p>Brij is a community event coordination tool that enables:</p>
@@ -62,7 +62,7 @@ import Footer from '../components/Footer.astro'
         advance notice.
       </p>
 
-      <h2>3. Account Registration</h2>
+      <h2 id="account-registration">3. Account Registration</h2>
 
       <h3>3.1 Account Creation</h3>
       <p>
@@ -104,7 +104,7 @@ import Footer from '../components/Footer.astro'
           delete the record</li>
       </ul>
 
-      <h2>4. User Content and Contributions</h2>
+      <h2 id="user-content-and-contributions">4. User Content and Contributions</h2>
 
       <h3>4.1 Your Content</h3>
       <p>
@@ -158,7 +158,7 @@ import Footer from '../components/Footer.astro'
         <li>Is designed to manipulate governance mechanisms or attestation scores</li>
       </ul>
 
-      <h2>5. Community Governance</h2>
+      <h2 id="community-governance">5. Community Governance</h2>
 
       <h3>5.1 Community Rules</h3>
       <p>
@@ -173,20 +173,64 @@ import Footer from '../components/Footer.astro'
         <li>Revenue distribution formulas</li>
       </ul>
 
-      <h3>5.2 Governance Tokens</h3>
+      <h3>5.2 Standing and Credit</h3>
       <p>
-        Communities that issue governance tokens do so under the terms of their
-        Bylaws and the CCA. Governance tokens:
+        Communities that activate Extol governance earn two types of community
+        tokens, determined by each member's chosen allocation:
+      </p>
+      <p>
+        <strong>Standing</strong> (governance commitment):
       </p>
       <ul>
-        <li>Represent governance weight, not economic value</li>
-        <li>Are non-transferable by default (communities may enable transfers
-          through governance vote)</li>
-        <li>May be subject to inflation mechanics that dilute inactive holders</li>
-        <li>Are designed for governance participation, not as investments</li>
+        <li>Permanently locked to your community — cannot be transferred, traded,
+          or withdrawn</li>
+        <li>Determines your governance weight (square-root weighted voting power)</li>
+        <li>Represents your commitment to this community</li>
+        <li>Irrevocable — the more you lock, the more voice you have</li>
       </ul>
+      <p>
+        <strong>Credit</strong> (portable balance):
+      </p>
+      <ul>
+        <li>Portable within the Extol network</li>
+        <li>Usable within the internal community economy</li>
+        <li>Cannot be exchanged for dollars, sold on public markets, or purchased
+          with money</li>
+        <li>Earned only through participation — not purchasable</li>
+        <li>Reflects recent activity (balances depreciate over time if not used)</li>
+        <li>Designed for governance participation and community utility, not as
+          investments</li>
+      </ul>
+      <p>
+        Credit operates as a closed-loop internal system, similar to loyalty
+        points or rewards programs. Credit has no public market value and is
+        not convertible to currency.
+      </p>
 
-      <h3>5.3 Platform Governance</h3>
+      <h3>5.3 Public Exchangeability (Community Opt-In)</h3>
+      <p>
+        Individual communities may vote through their governance process to
+        enable public exchangeability for their tokens. This is an upgrade
+        from the default closed-loop model and requires:
+      </p>
+      <ul>
+        <li>The community has achieved sufficient governance maturity, including
+          formation as a Decentralized Unincorporated Nonprofit Association
+          (DUNA) or equivalent governance structure demonstrating independent,
+          member-driven decision-making</li>
+        <li>A governance vote by the community's members</li>
+        <li>Fresh consent from each member (see Section 4.3)</li>
+        <li>Compliance with additional regulatory requirements</li>
+        <li>Migration to self-custody wallets</li>
+      </ul>
+      <p>
+        Public exchangeability is not the default. Most communities operate
+        entirely within the internal credit system. Extol does not encourage
+        or promote public exchangeability — it is available as an option for
+        communities whose needs require it.
+      </p>
+
+      <h3>5.4 Platform Governance</h3>
       <p>
         Changes to the Extol platform that affect all communities — including
         changes to these Terms, the CCA, and platform-wide policies — are
@@ -194,7 +238,7 @@ import Footer from '../components/Footer.astro'
         described in the Platform Governance Charter.
       </p>
 
-      <h2>6. Intellectual Property</h2>
+      <h2 id="intellectual-property">6. Intellectual Property</h2>
 
       <h3>6.1 Extol Platform</h3>
       <p>
@@ -218,7 +262,7 @@ import Footer from '../components/Footer.astro'
         accurately describe your use of the Services.
       </p>
 
-      <h2>7. Fees and Payment</h2>
+      <h2 id="fees-and-payment">7. Fees and Payment</h2>
 
       <h3>7.1 Free Tier</h3>
       <p>
@@ -249,7 +293,7 @@ import Footer from '../components/Footer.astro'
         CCA-governed fees.
       </p>
 
-      <h2>8. Acceptable Use</h2>
+      <h2 id="acceptable-use">8. Acceptable Use</h2>
       <p>You agree not to:</p>
       <ul>
         <li>Use the Services for any unlawful purpose</li>
@@ -262,11 +306,32 @@ import Footer from '../components/Footer.astro'
         <li>Resell or sublicense access to the Services without authorization</li>
       </ul>
       <p>
-        Violation of this section may result in account suspension or
-        termination.
+        Violation of this section — including any use of the Services in
+        violation of applicable federal, state, local, or international law —
+        may result in content removal, account suspension, or termination at
+        Extol's sole discretion.
       </p>
 
-      <h2>9. Account Deletion and Data Removal</h2>
+      <h3>8.1 Community Moderation</h3>
+      <p>
+        Individual communities may establish and enforce their own rules
+        through their Bylaws, consistent with the CCA and these Terms.
+        Community coordinators and governance processes may:
+      </p>
+      <ul>
+        <li>Remove or restrict content that violates community rules</li>
+        <li>Suspend or remove members who violate community Bylaws</li>
+        <li>Establish standards for participation, contribution quality, and
+          conduct</li>
+      </ul>
+      <p>
+        Extol does not adjudicate disputes between communities and their
+        members except as provided in the CCA's dispute resolution process
+        (see Section 14.4). Communities are responsible for enforcing their
+        own rules within the framework of applicable law and these Terms.
+      </p>
+
+      <h2 id="account-deletion-and-data-removal">9. Account Deletion and Data Removal</h2>
 
       <h3>9.1 Your Right to Delete</h3>
       <p>
@@ -302,7 +367,7 @@ import Footer from '../components/Footer.astro'
         event attendance counts) may be retained in anonymized form.
       </p>
 
-      <h2>10. Disclaimers</h2>
+      <h2 id="disclaimers">10. Disclaimers</h2>
 
       <h3>10.1 As-Is Service</h3>
       <p>
@@ -330,7 +395,7 @@ import Footer from '../components/Footer.astro'
         framework of the CCA and these Terms.
       </p>
 
-      <h2>11. COPPA Compliance</h2>
+      <h2 id="coppa-compliance">11. COPPA Compliance</h2>
 
       <h3>11.1 Children Under 13</h3>
       <p>
@@ -356,7 +421,7 @@ import Footer from '../components/Footer.astro'
         promptly delete the information.
       </p>
 
-      <h2>12. Limitation of Liability</h2>
+      <h2 id="limitation-of-liability">12. Limitation of Liability</h2>
       <p>
         TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, EXTOL, INC., ITS
         OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY
@@ -371,7 +436,7 @@ import Footer from '../components/Footer.astro'
         ($100).
       </p>
 
-      <h2>13. Indemnification</h2>
+      <h2 id="indemnification">13. Indemnification</h2>
       <p>
         You agree to indemnify, defend, and hold harmless Extol, Inc. and its
         officers, directors, employees, and agents from any claims, losses,
@@ -385,7 +450,7 @@ import Footer from '../components/Footer.astro'
         <li>Your violation of any third party's rights</li>
       </ul>
 
-      <h2>14. Dispute Resolution</h2>
+      <h2 id="dispute-resolution">14. Dispute Resolution</h2>
 
       <h3>14.1 Governing Law</h3>
       <p>
@@ -425,7 +490,7 @@ import Footer from '../components/Footer.astro'
         property infringement or unauthorized access to the Services.
       </p>
 
-      <h2>15. Modifications to Terms</h2>
+      <h2 id="modifications-to-terms">15. Modifications to Terms</h2>
       <p>
         We may modify these Terms at any time. Material changes will be
         communicated with at least 30 days' advance notice through the platform
@@ -433,7 +498,7 @@ import Footer from '../components/Footer.astro'
         of modifications constitutes acceptance of the updated Terms.
       </p>
 
-      <h2>16. Termination</h2>
+      <h2 id="termination">16. Termination</h2>
 
       <h3>16.1 By You</h3>
       <p>
@@ -444,9 +509,11 @@ import Footer from '../components/Footer.astro'
       <h3>16.2 By Extol</h3>
       <p>We may suspend or terminate your account if:</p>
       <ul>
-        <li>You violate these Terms</li>
+        <li>You violate these Terms or applicable law</li>
         <li>Your use of the Services poses a security risk</li>
-        <li>We are required to do so by law</li>
+        <li>Your conduct violates applicable federal, state, local, or
+          international law</li>
+        <li>We are required to do so by law, regulation, or court order</li>
         <li>Your account has been inactive for more than 24 months</li>
       </ul>
       <p>
@@ -462,7 +529,7 @@ import Footer from '../components/Footer.astro'
         Resolution) survive termination.
       </p>
 
-      <h2>17. General Provisions</h2>
+      <h2 id="general-provisions">17. General Provisions</h2>
 
       <h3>17.1 Entire Agreement</h3>
       <p>

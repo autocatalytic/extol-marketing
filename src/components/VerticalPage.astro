@@ -67,7 +67,7 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, ctaH
         <div class="mt-8">
           {ctaForm ? (
             <div class="max-w-md mx-auto" id="waitlist-form">
-              <p class="text-sm text-warm-gray-400 mb-4">Enter your email. We'll reach out when Extol is ready for nonprofits.</p>
+              <p class="text-sm text-cream/70 mb-4">Enter your email. We'll reach out when Extol is ready for nonprofits.</p>
               <div class="flex gap-3">
                 <input
                   type="email"
@@ -85,15 +85,44 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, ctaH
                 </button>
               </div>
               <p id="waitlist-thanks" class="hidden text-sm text-terracotta-400 mt-4">Thanks! We'll be in touch.</p>
+              <p id="waitlist-error" class="hidden text-sm text-red-400 mt-4">Something went wrong. Email us at info@extol.work.</p>
             </div>
-            <script>
-              document.getElementById('waitlist-btn')?.addEventListener('click', () => {
+            <script data-vertical={vertical}>
+              // TODO: Deploy apps-script.gs as web app and paste URL here
+              const SHEET_URL = 'APPS_SCRIPT_URL_PLACEHOLDER'
+              document.getElementById('waitlist-btn')?.addEventListener('click', async () => {
                 const input = document.getElementById('waitlist-email') as HTMLInputElement
                 const email = input?.value?.trim()
                 if (!email || !input?.checkValidity()) { input?.reportValidity(); return }
-                window.location.href = `mailto:info@extol.work?subject=${encodeURIComponent('Nonprofit waitlist')}&body=${encodeURIComponent(`Waitlist signup: ${email}`)}`
-                document.getElementById('waitlist-thanks')?.classList.remove('hidden')
-                input.value = ''
+                const btn = document.getElementById('waitlist-btn') as HTMLButtonElement
+                btn.textContent = 'Sending...'
+                btn.disabled = true
+                try {
+                  const params = new URLSearchParams(window.location.search)
+                  await fetch(SHEET_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                      email,
+                      slug: document.querySelector('script[data-vertical]')?.getAttribute('data-vertical') || 'unknown',
+                      utm_source: params.get('utm_source') || '',
+                      utm_medium: params.get('utm_medium') || '',
+                      utm_campaign: params.get('utm_campaign') || '',
+                      utm_content: params.get('utm_content') || '',
+                      ref: params.get('ref') || document.referrer || '',
+                      timestamp: new Date().toISOString(),
+                    }),
+                  })
+                  document.getElementById('waitlist-thanks')?.classList.remove('hidden')
+                  document.getElementById('waitlist-error')?.classList.add('hidden')
+                  input.value = ''
+                  btn.textContent = 'Joined!'
+                } catch {
+                  document.getElementById('waitlist-error')?.classList.remove('hidden')
+                  btn.textContent = 'Join waitlist'
+                  btn.disabled = false
+                }
               })
             </script>
           ) : (

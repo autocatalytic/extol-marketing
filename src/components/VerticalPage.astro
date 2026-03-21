@@ -88,8 +88,7 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, ctaH
               <p id="waitlist-error" class="hidden text-sm text-red-400 mt-4">Something went wrong. Email us at info@extol.work.</p>
             </div>
             <script data-vertical={vertical}>
-              // TODO: Deploy apps-script.gs as web app and paste URL here
-              const SHEET_URL = 'APPS_SCRIPT_URL_PLACEHOLDER'
+              const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzq9UxvGGIyKExjc6UJjh3jqRObDTVDnCIFlTAT6vSMKY_gi9ivaqOj9G4L9mvUyLGN/exec'
               document.getElementById('waitlist-btn')?.addEventListener('click', async () => {
                 const input = document.getElementById('waitlist-email') as HTMLInputElement
                 const email = input?.value?.trim()

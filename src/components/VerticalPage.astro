@@ -16,10 +16,11 @@ interface Props {
   seoTitle: string
   ctaButton?: string
   ctaHref?: string
+  ctaForm?: boolean
   footerText?: string
 }
 
-const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, ctaHref, footerText } = Astro.props
+const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, ctaHref, ctaForm, footerText } = Astro.props
 ---
 
 <Base title={seoTitle}>
@@ -64,12 +65,45 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, ctaH
           {cta}
         </h2>
         <div class="mt-8">
-          <a
-            href={ctaHref || "https://brij.extol.work"}
-            class="inline-flex items-center justify-center px-8 py-3 text-base font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-400 transition-colors"
-          >
-            {ctaButton || 'Start free with brij →'}
-          </a>
+          {ctaForm ? (
+            <div class="max-w-md mx-auto" id="waitlist-form">
+              <p class="text-sm text-warm-gray-400 mb-4">Enter your email. We'll reach out when Extol is ready for nonprofits.</p>
+              <div class="flex gap-3">
+                <input
+                  type="email"
+                  id="waitlist-email"
+                  required
+                  placeholder="you@nonprofit.org"
+                  class="flex-1 px-4 py-3 rounded-lg bg-bark-800 text-cream border border-warm-gray-500 placeholder:text-warm-gray-500 focus:outline-none focus:border-terracotta-400 text-base"
+                />
+                <button
+                  type="button"
+                  id="waitlist-btn"
+                  class="px-6 py-3 text-base font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-400 transition-colors whitespace-nowrap"
+                >
+                  Join waitlist
+                </button>
+              </div>
+              <p id="waitlist-thanks" class="hidden text-sm text-terracotta-400 mt-4">Thanks! We'll be in touch.</p>
+            </div>
+            <script>
+              document.getElementById('waitlist-btn')?.addEventListener('click', () => {
+                const input = document.getElementById('waitlist-email') as HTMLInputElement
+                const email = input?.value?.trim()
+                if (!email || !input?.checkValidity()) { input?.reportValidity(); return }
+                window.location.href = `mailto:info@extol.work?subject=${encodeURIComponent('Nonprofit waitlist')}&body=${encodeURIComponent(`Waitlist signup: ${email}`)}`
+                document.getElementById('waitlist-thanks')?.classList.remove('hidden')
+                input.value = ''
+              })
+            </script>
+          ) : (
+            <a
+              href={ctaHref || "https://brij.extol.work"}
+              class="inline-flex items-center justify-center px-8 py-3 text-base font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-400 transition-colors"
+            >
+              {ctaButton || 'Start free with brij →'}
+            </a>
+          )}
         </div>
         <p class="mt-8 text-sm text-warm-gray-500">
           {footerText || 'brij is free forever. Governance tools available when your group is ready.'}

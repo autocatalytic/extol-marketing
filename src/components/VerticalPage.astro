@@ -15,10 +15,11 @@ interface Props {
   cta: string
   seoTitle: string
   ctaButton?: string
+  ctaHref?: string
   footerText?: string
 }
 
-const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, footerText } = Astro.props
+const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, ctaHref, footerText } = Astro.props
 ---
 
 <Base title={seoTitle}>
@@ -64,7 +65,7 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, foot
         </h2>
         <div class="mt-8">
           <a
-            href="https://brij.extol.work"
+            href={ctaHref || "https://brij.extol.work"}
             class="inline-flex items-center justify-center px-8 py-3 text-base font-medium bg-terracotta-500 text-cream rounded-lg hover:bg-terracotta-400 transition-colors"
           >
             {ctaButton || 'Start free with brij →'}

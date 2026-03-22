@@ -87,41 +87,40 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, ctaH
               <p id="waitlist-thanks" class="hidden text-sm text-terracotta-400 mt-4">Thanks! We'll be in touch.</p>
               <p id="waitlist-error" class="hidden text-sm text-red-400 mt-4">Something went wrong. Email us at info@extol.work.</p>
             </div>
-            <script data-vertical={vertical}>
-              const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzq9UxvGGIyKExjc6UJjh3jqRObDTVDnCIFlTAT6vSMKY_gi9ivaqOj9G4L9mvUyLGN/exec'
-              document.getElementById('waitlist-btn')?.addEventListener('click', async () => {
-                const input = document.getElementById('waitlist-email') as HTMLInputElement
-                const email = input?.value?.trim()
-                if (!email || !input?.checkValidity()) { input?.reportValidity(); return }
-                const btn = document.getElementById('waitlist-btn') as HTMLButtonElement
-                btn.textContent = 'Sending...'
-                btn.disabled = true
-                try {
-                  const params = new URLSearchParams(window.location.search)
-                  await fetch(SHEET_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    body: JSON.stringify({
-                      email,
-                      slug: document.querySelector('script[data-vertical]')?.getAttribute('data-vertical') || 'unknown',
-                      utm_source: params.get('utm_source') || '',
-                      utm_medium: params.get('utm_medium') || '',
-                      utm_campaign: params.get('utm_campaign') || '',
-                      utm_content: params.get('utm_content') || '',
-                      ref: params.get('ref') || document.referrer || '',
-                      timestamp: new Date().toISOString(),
-                    }),
+            <script is:inline define:vars={{ vertical }}>
+              var SHEET_URL = 'https://script.google.com/macros/s/AKfycbzq9UxvGGIyKExjc6UJjh3jqRObDTVDnCIFlTAT6vSMKY_gi9ivaqOj9G4L9mvUyLGN/exec';
+              document.getElementById('waitlist-btn').addEventListener('click', function() {
+                var input = document.getElementById('waitlist-email');
+                var email = input.value.trim();
+                if (!email || !input.checkValidity()) { input.reportValidity(); return; }
+                var btn = document.getElementById('waitlist-btn');
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+                var params = new URLSearchParams(window.location.search);
+                fetch(SHEET_URL, {
+                  method: 'POST',
+                  mode: 'no-cors',
+                  body: JSON.stringify({
+                    email: email,
+                    slug: vertical,
+                    utm_source: params.get('utm_source') || '',
+                    utm_medium: params.get('utm_medium') || '',
+                    utm_campaign: params.get('utm_campaign') || '',
+                    utm_content: params.get('utm_content') || '',
+                    ref: params.get('ref') || document.referrer || '',
+                    timestamp: new Date().toISOString()
                   })
-                  document.getElementById('waitlist-thanks')?.classList.remove('hidden')
-                  document.getElementById('waitlist-error')?.classList.add('hidden')
-                  input.value = ''
-                  btn.textContent = 'Joined!'
-                } catch {
-                  document.getElementById('waitlist-error')?.classList.remove('hidden')
-                  btn.textContent = 'Join waitlist'
-                  btn.disabled = false
-                }
-              })
+                }).then(function() {
+                  document.getElementById('waitlist-thanks').classList.remove('hidden');
+                  document.getElementById('waitlist-error').classList.add('hidden');
+                  input.value = '';
+                  btn.textContent = 'Joined!';
+                }).catch(function() {
+                  document.getElementById('waitlist-error').classList.remove('hidden');
+                  btn.textContent = 'Join waitlist';
+                  btn.disabled = false;
+                });
+              });
             </script>
           ) : (
             <a

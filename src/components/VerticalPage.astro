@@ -101,7 +101,6 @@ const { vertical, headline, subheadline, bullets, cta, seoTitle, ctaButton, ctaH
                   await fetch(SHEET_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                       email,
                       slug: document.querySelector('script[data-vertical]')?.getAttribute('data-vertical') || 'unknown',
